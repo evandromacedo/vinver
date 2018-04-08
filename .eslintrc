@@ -1,0 +1,7 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "jsx-quotes": 1,
+    "quotes": [1, "single"]
+  }
+}
