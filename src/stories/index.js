@@ -6,4 +6,5 @@ import '../static/font.css';
 // Stories
 /* eslint-disable no-unused-vars */
 import * as InputSearchStory from './Input/InputSearchStory';
+import * as HeaderStory from './Header/HeaderStory';
 /* eslint-enable no-unused-vars */

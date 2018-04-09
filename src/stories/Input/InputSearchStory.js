@@ -14,7 +14,7 @@ const decorator = story => (
   </div>
 );
 
-const InputSearchStory = storiesOf('Common/Input/Default', module)
+const InputSearchStory = storiesOf('InputSearch', module)
   .addDecorator(decorator)
   .add('default', () => (
     <InputSearch onChange={action('change')} placeholder="Buscar no Vinver por..." />

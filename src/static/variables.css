@@ -57,4 +57,7 @@
   --light-primary: rgba(248,249,250,0.87);
   --light-secondary: rgba(248,249,250,0.54);
   --light-disabled: rgba(248,249,250,0.38);
+
+  /* Container */
+  --container-width: 113.6rem;
 }
