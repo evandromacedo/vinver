@@ -8,7 +8,9 @@ import '../static/font.css';
 import * as InputStory from './Input/InputStory';
 import * as InputLabelStory from './Input/InputLabelStory';
 import * as InputSearchStory from './Input/InputSearchStory';
+import * as ButtonLightStory from './Button/ButtonLightStory';
 import * as HeaderStory from './Header/HeaderStory';
 import * as SideNavStory from './SideNav/SideNavStory';
 import * as SideNavItemStory from './SideNav/SideNavItemStory';
+import * as MakePostStory from './MakePost/MakePostStory';
 /* eslint-enable no-unused-vars */

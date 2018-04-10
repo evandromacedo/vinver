@@ -10,6 +10,7 @@ import './App.css';
 // Containers
 import Header from 'containers/Header/Header';
 import SideNav from 'containers/SideNav/SideNav';
+import MakePost from 'components/MakePost/MakePost'; // TODO: importar no container Main
 
 class App extends Component {
   render() {
@@ -21,7 +22,8 @@ class App extends Component {
             <SideNav />
           </div>
           <div className="app-main">
-            <div style={{ height: '500px', backgroundColor: 'gray' }}>Main</div>
+            {/* TODO: importar no container Main  */}
+            <MakePost />
           </div>
           <div className="app-aside">
             <div style={{ height: '500px', backgroundColor: 'gray' }}>Aside</div>
