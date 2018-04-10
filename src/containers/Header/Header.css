@@ -22,10 +22,6 @@
   grid-area: left;
 }
 
-.header-left__logo {
-  display: inline-block;
-}
-
 .header-center {
   grid-area: center;
 }
@@ -35,6 +31,29 @@
   justify-self: end;
 }
 
+@media (max-width: 768px) {
+  .header-wrapper {
+    grid-template-areas: "left center center center";
+  }
+
+  .header-center {
+    margin-right: 1.6rem;
+  }
+
+  .header-right {
+    display: none;
+  }
+}
+
+.header-left__logo {
+  margin-left: 1.2rem;
+  display: inline-block;
+}
+
 .header-right__meta-icon {
+  /* Por enquanto que não coloca os ícones */
+  /* Remove opacidade */
+  color: black;
   margin-left: 2rem;
+  margin-right: 1.6rem;
 }

@@ -14,8 +14,8 @@ class SideNav extends Component {
         <ul className="side-nav__nav-list">
           <li><SideNavItem title="Home" icon="🏠" active /></li>
           <li><SideNavItem title="Perfil" icon="👤" /></li>
-          <li><SideNavItem title="Notificações" icon="🛎" /></li>
-          <li><SideNavItem title="Mensagens" icon="✉️" /></li>
+          <li><SideNavItem title="Notificações" icon="🛎" info="12" /></li>
+          <li><SideNavItem title="Mensagens" icon="✉️" info="4" /></li>
           <li><SideNavItem title="Metas" icon="📈" /></li>
           <li><SideNavItem title="Plataforma Vinver" icon="📱" /></li>
         </ul>

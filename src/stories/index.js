@@ -5,6 +5,7 @@ import '../static/font.css';
 
 // Stories
 /* eslint-disable no-unused-vars */
+import * as InputStory from './Input/InputStory';
 import * as InputSearchStory from './Input/InputSearchStory';
 import * as HeaderStory from './Header/HeaderStory';
 import * as SideNavStory from './SideNav/SideNavStory';

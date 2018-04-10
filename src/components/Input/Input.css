@@ -1,3 +1,44 @@
+/* Input */
+.input {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--grey-5);
+  padding: 0 0.8rem;
+  color: var(--dark-primary);
+  font-family: "Open Sans";
+  font-size: 1.4rem;
+  line-height: 3rem;
+  caret-color: var(--blue-fill);
+  outline: 0;
+}
+
+.input::placeholder {
+  color: var(--dark-secondary);
+}
+
+.input:focus {
+  border-color: var(--blue-fill);
+}
+
+.input:disabled,
+.input--disabled {
+  cursor: not-allowed;
+  border-color: var(--grey-3);
+  background-color: var(--grey-2);
+  color: var(--dark-disabled);
+}
+
+.input--disabled::placeholder {
+  color: var(--dark-disabled);
+  opacity: 1;
+}
+
+.input--has-error,
+.input--has-error:focus {
+  border-color: var(--red-fill);
+  caret-color: var(--red-fill);
+}
+
 /* Input Search */
 .input-search {
   width: 100%;
