@@ -1,0 +1,31 @@
+/* Side Nav Item */
+.side-nav-item {
+  display: grid;
+  /* grid-gap: 2rem; */
+  grid-template-columns: 6rem 1fr;
+  grid-auto-rows: 4.8rem;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.side-nav-item:hover {
+  background-color: var(--grey-3);
+}
+
+.side-nav-item--active > .side-nav-item__icon {
+  color: var(--blue-fill);
+}
+
+.side-nav-item--active > .side-nav-item__title {
+  color: var(--dark-primary);
+}
+
+.side-nav-item__icon {
+  font-size: 1.6rem;
+  justify-self: center;
+}
+
+.side-nav-item__title__info {
+  margin-left: 0.8rem;
+}
