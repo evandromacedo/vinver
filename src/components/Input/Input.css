@@ -39,6 +39,20 @@
   caret-color: var(--red-fill);
 }
 
+/* Input Label */
+.input-label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.input-label__label {
+  line-height: 1.8rem;
+}
+
+.input:focus + .input-label__label {
+  color: var(--dark-primary);
+}
+
 /* Input Search */
 .input-search {
   width: 100%;
