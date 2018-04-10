@@ -22,6 +22,10 @@
   grid-area: left;
 }
 
+.header-left__logo {
+  display: inline-block;
+}
+
 .header-center {
   grid-area: center;
 }
@@ -29,26 +33,8 @@
 .header-right {
   grid-area: right;
   justify-self: end;
-  display: grid;
-  justify-items: end;
-}
-
-.header-left__logo {
-  text-transform: lowercase;
-  font-weight: 600;
-  color: var(--blue-fill);
-}
-
-.header-right__meta {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
 }
 
 .header-right__meta-icon {
   margin-left: 2rem;
-  height: 2rem;
-  width: 1.6rem;
-  background-color: var(--blue-fill);
-  display: inline-block;
 }

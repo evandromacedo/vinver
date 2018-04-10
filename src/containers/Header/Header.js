@@ -6,7 +6,8 @@ import React, { Component } from 'react';
 import './Header.css';
 
 // Components
-import InputSearch from '../../components/Input/InputSearch';
+import logo from 'static/img/logo.png';
+import InputSearch from 'components/Input/InputSearch';
 
 class Header extends Component {
   render() {
@@ -14,15 +15,17 @@ class Header extends Component {
       <header className="header">
         <div className="header-wrapper">
           <div className="header-left">
-            <a className="header-left__logo title-3" href="/">Vinver</a>
+            <a className="header-left__logo" href="/">
+              <img src={logo} alt="Logo" />
+            </a>
           </div>
           <div className="header-center">
             <InputSearch placeholder="Buscar no Vinver por..." />
           </div>
           <div className="header-right">
-            <a className="header-right__meta footnote-1 dark-secondary" href="/">
+            <a className="footnote-1 dark-secondary" href="/">
               Cadastrar Meta
-              <span className="header-right__meta-icon"></span>
+              <span className="header-right__meta-icon">🗓</span>
             </a>
           </div>
         </div>
