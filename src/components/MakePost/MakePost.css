@@ -23,16 +23,21 @@
   transition: height ease 0.3s;
 }
 
-.make-post__textarea:focus {
+.make-post__textarea--expanded {
+  height: 9.6rem;
+  border-color: var(--blue-fill);
+}
+
+/* .make-post__textarea:focus {
   height: 9.6rem;
 }
 
 .make-post__textarea:focus + .make-post__options {
   display: grid;
-}
+} */
 
 .make-post__options {
-  display: none;
+  display: grid;
   margin-top: 1.6rem;
   font-size: 1.6rem;
   grid-gap: 2.4rem;

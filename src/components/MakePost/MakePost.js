@@ -9,27 +9,57 @@ import './MakePost.css';
 import ButtonLight from 'components/Button/ButtonLight';
 
 class MakePost extends Component {
+  state = {
+    expanded: false
+  };
+
+  hideOnClickOutside = (event) => {
+    if (event.target.closest('.make-post') !== null) {
+      if (!this.state.expanded) {
+        this.setState({ expanded: true });
+      }
+    }
+    else {
+      if (this.state.expanded) {
+        this.setState({ expanded: false });
+      }
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.hideOnClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.hideOnClickOutside);
+  }
+
   render() {
+    const { expanded } = this.state;
+
     return (
       <div className="make-post">
         <div className="make-post__user-image"></div>
         <div>
           <textarea
-            className="input make-post__textarea" rows="1"
+            rows="1"
+            className={`input make-post__textarea ${expanded ? 'input make-post__textarea--expanded' : ''}`}
             placeholder="Sobre o que você está pensando?"
           />
-          <div className="make-post__options">
-            <a href="#">🖼</a>
-            <a href="#">📊</a>
-            <a href="#">📎</a>
-            <a href="#">
-              🎓 <span className="caption-2 dark-disabled">Todas as classes</span>
-            </a>
-            <ButtonLight
-              color="blue"
-              title="Publicar"
-            />
-          </div>
+          {expanded &&
+            <div className="make-post__options">
+              <a href="#">🖼</a>
+              <a href="#">📊</a>
+              <a href="#">📎</a>
+              <a href="#">
+                🎓 <span className="caption-2 dark-disabled">Todas as classes</span>
+              </a>
+              <ButtonLight
+                color="blue"
+                title="Publicar"
+              />
+            </div>
+          }
         </div>
       </div>
     );
