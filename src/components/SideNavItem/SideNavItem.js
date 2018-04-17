@@ -45,7 +45,7 @@ SideNavItem.propTypes = {
 };
 
 SideNavItem.defaultProps = {
-  linkTo: '/',
+  linkTo: '#',
   title: '',
   icon: '',
   info: '',

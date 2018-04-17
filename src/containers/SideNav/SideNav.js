@@ -25,22 +25,22 @@ class SideNav extends Component {
             <SideNavItem title="Sair" icon="🔚" />
           </li>
           <li>
-            <a href="/" className="side-nav__footer-link caption-2 dark-secondary">
+            <a href="#" className="side-nav__footer-link caption-2 dark-secondary">
               Ajuda & FAQ
             </a>
           </li>
           <li>
-            <a href="/" className="side-nav__footer-link caption-2 dark-secondary">
+            <a href="#" className="side-nav__footer-link caption-2 dark-secondary">
               Sobre a plataforma
             </a>
           </li>
           <li>
-            <a href="/" className="side-nav__footer-link caption-2 dark-secondary">
+            <a href="#" className="side-nav__footer-link caption-2 dark-secondary">
               Termos de uso
             </a>
           </li>
           <li>
-            <a href="/" className="side-nav__footer-link caption-2 dark-secondary">
+            <a href="#" className="side-nav__footer-link caption-2 dark-secondary">
               Política de Privacidade
             </a>
           </li>
