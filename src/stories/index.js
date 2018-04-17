@@ -13,4 +13,5 @@ import * as HeaderStory from './Header/HeaderStory';
 import * as SideNavStory from './SideNav/SideNavStory';
 import * as SideNavItemStory from './SideNav/SideNavItemStory';
 import * as MakePostStory from './MakePost/MakePostStory';
+import * as PostStory from './Post/PostStory';
 /* eslint-enable no-unused-vars */
