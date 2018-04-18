@@ -10,6 +10,7 @@ import ButtonLight from 'components/Button/ButtonLight';
 
 class MakePost extends Component {
   state = {
+    text: '',
     expanded: false
   };
 
@@ -34,6 +35,22 @@ class MakePost extends Component {
     document.removeEventListener('click', this.hideOnClickOutside);
   }
 
+  updateText = (e) => {
+    this.setState({ text: e.target.value });
+  }
+
+  publicar = () => {
+    const { text } = this.state;
+
+    if (text) {
+      this.props.addPost(text);
+      this.setState({
+        text: '',
+        expanded: false
+      });
+    }
+  }
+
   render() {
     const { expanded } = this.state;
 
@@ -42,6 +59,8 @@ class MakePost extends Component {
         <div className="make-post__user-image"></div>
         <div>
           <textarea
+            value={this.state.text}
+            onChange={this.updateText}
             rows="1"
             className={`input make-post__textarea ${expanded ? 'input make-post__textarea--expanded' : ''}`}
             placeholder="Sobre o que você está pensando?"
@@ -57,6 +76,7 @@ class MakePost extends Component {
               <ButtonLight
                 color="blue"
                 title="Publicar"
+                onClick={this.publicar}
               />
             </div>
           }
@@ -68,12 +88,12 @@ class MakePost extends Component {
 
 MakePost.propTypes = {
   userImage: PropTypes.string,
-  onPost: PropTypes.func
+  addPost: PropTypes.func
 };
 
 MakePost.defaultProps = {
   userImage: '',
-  onPost: () => null
+  addPost: () => null
 };
 
 export default MakePost;

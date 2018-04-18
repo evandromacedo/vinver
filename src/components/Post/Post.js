@@ -25,7 +25,7 @@ class Post extends Component {
         <header className="post__header">
           <p className="caption-2 dark-primary">{ classe.materia }</p>
           <p className="caption-3 dark-disabled">{ classe.turma }</p>
-          <p className="caption-3 dark-disabled">{ moment(momento).format('dddd DD/MM · HH[h]mm') }</p>
+          <p className="caption-3 dark-disabled">{ moment(momento).format('DD/MM · HH[h]mm') }</p>
         </header>
 
         {/* Body */}
@@ -76,9 +76,9 @@ Post.propTypes = {
 
 Post.defaultProps = {
   momento: new Date(),
-  text: '',
-  likes: 0,
-  comments: 0
+  texto: '',
+  curtidas: 0,
+  comentarios: 0
 };
 
 export default Post;
