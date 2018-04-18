@@ -15,6 +15,9 @@ class MakePost extends Component {
   };
 
   hideOnClickOutside = (event) => {
+    // Referência:
+    // https://stackoverflow.com/a/3028037
+
     if (event.target.closest('.make-post') !== null) {
       if (!this.state.expanded) {
         this.setState({ expanded: true });

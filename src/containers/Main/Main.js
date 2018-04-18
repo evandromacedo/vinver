@@ -4,7 +4,11 @@ import React, { Component } from 'react';
 // Styles
 import './Main.css';
 
+// Libs
+import shortid from 'shortid';
+
 // Components
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Post from 'components/Post/Post';
 import MakePost from 'components/MakePost/MakePost';
 import SamplePosts from './SamplePosts';
@@ -14,8 +18,11 @@ class Main extends Component {
     posts: []
   }
 
-  addPost = (post) => {
-    const posts = [post, ...this.state.posts];
+  addPost = (texto) => {
+    const posts = [
+      { id: shortid.generate(), texto },
+      ...this.state.posts
+    ];
     this.setState({ posts });
   }
 
@@ -36,16 +43,21 @@ class Main extends Component {
     return (
       <main className="main">
         <MakePost addPost={this.addPost} />
-        {posts &&
-          posts.map((post, index) => (
+        <ReactCSSTransitionGroup
+          className="main"
+          transitionName="new-post"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          {posts.map((post, index) => (
             <Post
-              key={index}
+              key={post.id}
               classe={classe}
               usuario={usuario}
-              texto={post}
+              texto={post.texto}
             />
-          ))
-        }
+          ))}
+        </ReactCSSTransitionGroup>
         <SamplePosts />
       </main>
     );
