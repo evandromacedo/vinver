@@ -1,6 +1,7 @@
 /* Make Post */
 .make-post {
   padding: 1.6rem;
+  border-radius: 0.4rem;
   background-color: var(--grey-1);
   box-shadow: var(--shadow-2);
   display: grid;

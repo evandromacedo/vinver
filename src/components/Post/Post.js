@@ -2,46 +2,55 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// Libs
+import moment from 'moment';
+
 // Styles
 import './Post.css';
 
-// Components
-// import ButtonLight from 'components/Button/ButtonLight';
-
 class Post extends Component {
   render() {
+    const {
+      classe,
+      usuario,
+      momento,
+      texto,
+      curtidas,
+      comentarios
+    } = this.props;
+
     return (
       <article className="post">
         {/* Header */}
         <header className="post__header">
-          <p className="caption-2 dark-primary">{ this.props.classe.materia }</p>
-          <p className="caption-3 dark-disabled">{ this.props.classe.turma }</p>
-          <p className="caption-3 dark-disabled">{ this.props.momento.toString() }</p>
+          <p className="caption-2 dark-primary">{ classe.materia }</p>
+          <p className="caption-3 dark-disabled">{ classe.turma }</p>
+          <p className="caption-3 dark-disabled">{ moment(momento).format('dddd DD/MM · HH[h]mm') }</p>
         </header>
 
         {/* Body */}
         <main className="post__body">
           <img
             className="post__body__imagem"
-            src={this.props.usuario.imagem}
+            src={usuario.imagem}
             alt="Perfil do Usuário"
           />
           <div className="post__body__info">
             <div>
               <p className="footnote-1 dark-primary">
-                { this.props.usuario.nome }
+                { usuario.nome }
               </p>
               <p className="footnote-2 dark-disabled">
-                { this.props.usuario.id }
+                { usuario.id }
               </p>
             </div>
             <p className="post__body__info__text footnote-2 dark-primary">
-              { this.props.texto }
+              { texto }
             </p>
           </div>
           <div className="post__body__footer">
-            <p className="caption-2 dark-disabled">❤️ { this.props.curtidas }</p>
-            <p className="caption-2 dark-disabled">📝 { this.props.comentarios }</p>
+            <p className="caption-2 dark-disabled">❤️ { curtidas }</p>
+            <p className="caption-2 dark-disabled">📝 { comentarios }</p>
           </div>
         </main>
       </article>
