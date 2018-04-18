@@ -45,3 +45,10 @@
   grid-template-columns: repeat(3, 2.4rem) 1fr 9.6rem;
   align-items: center;
 }
+
+.make-post__options__school {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: 2.4rem 1fr;
+  align-items: center;
+}

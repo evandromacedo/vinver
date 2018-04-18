@@ -8,6 +8,10 @@ import moment from 'moment';
 // Styles
 import './Post.css';
 
+// Components
+import Favorite from 'components/Icon/Favorite';
+import Comment from 'components/Icon/Comment';
+
 class Post extends Component {
   render() {
     const {
@@ -49,8 +53,12 @@ class Post extends Component {
             </p>
           </div>
           <div className="post__body__footer">
-            <p className="caption-2 dark-disabled">❤️ { curtidas }</p>
-            <p className="caption-2 dark-disabled">📝 { comentarios }</p>
+            <p className="post__body__footer__item caption-2 dark-disabled">
+              <Favorite fill="grey-5" />{ curtidas }
+            </p>
+            <p className="post__body__footer__item caption-2 dark-disabled">
+              <Comment fill="grey-5" /> { comentarios }
+            </p>
           </div>
         </main>
       </article>

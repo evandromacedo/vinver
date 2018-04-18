@@ -22,7 +22,7 @@
 }
 
 .side-nav-item__icon {
-  font-size: 1.6rem;
+  display: grid;
   justify-self: center;
 }
 

@@ -42,3 +42,11 @@
   grid-template-columns: auto auto 1fr;
   align-items: center;
 }
+
+.post__body__footer__item {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2.4rem auto;
+  align-items: center;
+  cursor: pointer;
+}

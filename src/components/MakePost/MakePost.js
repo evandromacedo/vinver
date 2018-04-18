@@ -7,6 +7,10 @@ import './MakePost.css';
 
 // Components
 import ButtonLight from 'components/Button/ButtonLight';
+import InsertPhoto from 'components/Icon/InsertPhoto';
+import PieChart from 'components/Icon/PieChart';
+import Link from 'components/Icon/Link';
+import School from 'components/Icon/School';
 
 class MakePost extends Component {
   state = {
@@ -70,11 +74,11 @@ class MakePost extends Component {
           />
           {expanded &&
             <div className="make-post__options">
-              <a href="#">🖼</a>
-              <a href="#">📊</a>
-              <a href="#">📎</a>
-              <a href="#">
-                🎓 <span className="caption-2 dark-disabled">Todas as classes</span>
+              <a href="#/"><InsertPhoto fill="grey-5" /></a>
+              <a href="#/"><PieChart fill="grey-5" /></a>
+              <a href="#/"><Link fill="grey-5" /></a>
+              <a href="#/" className="make-post__options__school">
+                <School fill="blue-fill" /> <span className="caption-2 dark-disabled">Todas as classes</span>
               </a>
               <ButtonLight
                 color="blue"

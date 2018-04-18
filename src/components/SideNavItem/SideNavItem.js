@@ -39,7 +39,7 @@ class SideNavItem extends Component {
 SideNavItem.propTypes = {
   linkTo: PropTypes.string,
   title: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.element.isRequired,
   info: PropTypes.string,
   active: PropTypes.bool
 };
@@ -47,7 +47,6 @@ SideNavItem.propTypes = {
 SideNavItem.defaultProps = {
   linkTo: '#',
   title: '',
-  icon: '',
   info: '',
   active: false
 };

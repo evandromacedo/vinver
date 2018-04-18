@@ -8,6 +8,7 @@ import './Header.css';
 // Components
 import logo from 'static/img/logo.png';
 import InputSearch from 'components/Input/InputSearch';
+import IconBook from 'components/Icon/Book';
 
 class Header extends Component {
   render() {
@@ -23,9 +24,11 @@ class Header extends Component {
             <InputSearch placeholder="Buscar no Vinver por..." />
           </div>
           <div className="header-right">
-            <a className="footnote-1 dark-secondary" href="#">
+            <a className="header-right__meta footnote-1 dark-secondary" href="#/">
               Cadastrar Meta
-              <span className="header-right__meta-icon">🗓</span>
+              <span className="header-right__meta-icon">
+                <IconBook fill="blue-fill" />
+              </span>
             </a>
           </div>
         </div>

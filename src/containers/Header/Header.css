@@ -51,9 +51,13 @@
 }
 
 .header-right__meta-icon {
-  /* Por enquanto que não coloca os ícones */
-  /* Remove opacidade */
-  color: black;
-  margin-left: 2rem;
+  display: grid;
   margin-right: 1.6rem;
+}
+
+.header-right__meta {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  align-items: center;
 }
