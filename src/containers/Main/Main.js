@@ -57,8 +57,8 @@ class Main extends Component {
               texto={post.texto}
             />
           ))}
+          <SamplePosts />
         </ReactCSSTransitionGroup>
-        <SamplePosts />
       </main>
     );
   }

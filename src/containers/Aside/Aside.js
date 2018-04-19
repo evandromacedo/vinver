@@ -4,12 +4,9 @@ import React, { Component } from 'react';
 // Styles
 import './Aside.css';
 
-// Libs
-import shortid from 'shortid';
-
 // Components
 import ShortProfile from 'components/ShortProfile/ShortProfile';
-
+import { Classes, Projetos, Destaque } from './SampleItems';
 
 class Aside extends Component {
   getUserInfo() {
@@ -40,7 +37,9 @@ class Aside extends Component {
     return (
       <aside className="aside">
         <ShortProfile {...this.getUserInfo()} />
-
+        <Classes />
+        <Projetos />
+        <Destaque />
       </aside>
     );
   }
