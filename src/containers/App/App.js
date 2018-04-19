@@ -15,6 +15,7 @@ import './App.css';
 import Header from 'containers/Header/Header';
 import SideNav from 'containers/SideNav/SideNav';
 import Main from 'containers/Main/Main';
+import Aside from 'containers/Aside/Aside';
 
 moment.locale('pt-BR');
 
@@ -31,14 +32,7 @@ class App extends Component {
             <Main />
           </div>
           <div className="app-aside">
-            <div style={{ height: '500px', backgroundColor: '#f1f3f5' }}>
-              <h1
-                className="title-3 dark-primary"
-                style={{ padding: '20px', textAlign: 'center' }}
-              >
-                {'<Aside />'}
-              </h1>
-            </div>
+            <Aside />
           </div>
         </div>
       </Fragment>
