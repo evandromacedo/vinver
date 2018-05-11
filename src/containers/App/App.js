@@ -30,7 +30,7 @@ class App extends Component {
             <SideNav />
           </div>
           <div className="app-main">
-            <Router>
+            <Router basename="/vinver/">
               <Fragment>
                 <Switch>
                   <Route exact path="/" component={Main} />
