@@ -1,5 +1,6 @@
 // React
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Moment
 import moment from 'moment';
@@ -29,7 +30,15 @@ class App extends Component {
             <SideNav />
           </div>
           <div className="app-main">
-            <Main />
+            <Router>
+              <Fragment>
+                <Switch>
+                  <Route exact path="/" component={Main} />
+                  <Route path="/perfil" render={() => <p>Perfil!!</p>} />
+                </Switch>
+              </Fragment>
+            </Router>
+            {/* <Main /> */}
           </div>
           <div className="app-aside">
             <Aside />
