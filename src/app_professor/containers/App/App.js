@@ -23,7 +23,7 @@ moment.locale('pt-BR');
 class App extends Component {
   render() {
     return (
-      <Router basename="/vinver/">
+      <Router basename="/vinver/professor">
         <Fragment>
           <Header />
           <div className="app-container">
@@ -52,7 +52,7 @@ export default App;
 class Perfil extends Component {
   render() {
     return (
-      <Router basename="/vinver/perfil">
+      <Router basename="/vinver/professor/perfil">
         <Route path="/" component={Perfilzao} />
       </Router>
     );
