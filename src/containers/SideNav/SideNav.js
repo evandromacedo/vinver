@@ -1,5 +1,6 @@
 // React
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 // Styles
 import './SideNav.css';
@@ -16,15 +17,37 @@ import Exit from 'components/Icon/Exit';
 
 class SideNav extends Component {
   render() {
+    const { url } = this.props.match;
+
     return (
       <aside className="side-nav">
         <ul className="side-nav__nav-list">
-          <li><SideNavItem title="Home" icon={<Home fill="blue-fill" />} active /></li>
-          <li><SideNavItem title="Perfil" icon={<Person fill="grey-7" />} /></li>
-          <li><SideNavItem title="Notificações" icon={<Notifications fill="grey-7" />} info="12" /></li>
-          <li><SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" /></li>
-          <li><SideNavItem title="Metas" icon={<Book fill="grey-7" />} /></li>
-          <li><SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} /></li>
+          <li>
+            <SideNavItem
+              title="Home"
+              to="/"
+              icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />}
+            />
+          </li>
+          <li>
+            <SideNavItem
+              title="Perfil"
+              to="/perfil"
+              icon={<Person fill={url === '/perfil' ? 'blue-fill' : 'grey-7'} />}
+            />
+          </li>
+          <li>
+            <SideNavItem title="Notificações" icon={<Notifications fill="grey-7" />} info="12" />
+          </li>
+          <li>
+            <SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" />
+          </li>
+          <li>
+            <SideNavItem title="Metas" icon={<Book fill="grey-7" />} />
+          </li>
+          <li>
+            <SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} />
+          </li>
         </ul>
 
         <ul>
@@ -32,24 +55,24 @@ class SideNav extends Component {
             <SideNavItem title="Sair" icon={<Exit fill="grey-7" />} />
           </li>
           <li>
-            <a href="#/" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
               Ajuda & FAQ
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#/" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
               Sobre a plataforma
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#/" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
               Termos de uso
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#/" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
               Política de Privacidade
-            </a>
+            </Link>
           </li>
         </ul>
       </aside>
@@ -57,4 +80,4 @@ class SideNav extends Component {
   }
 }
 
-export default SideNav;
+export default withRouter(SideNav);

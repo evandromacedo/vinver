@@ -36,3 +36,8 @@ html {
     display: none;
   }
 }
+
+/* Helpers */
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -23,28 +23,26 @@ moment.locale('pt-BR');
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <Header />
-        <div className="app-container">
-          <div className="app-side-nav">
-            <SideNav />
+      <Router basename="/vinver/">
+        <Fragment>
+          <Header />
+          <div className="app-container">
+            <div className="app-side-nav">
+              <Route path="/:active?" component={SideNav} />
+              {/* <SideNav /> */}
+            </div>
+            <div className="app-main">
+              <Switch>
+                <Route exact path="/" component={Main} />
+                <Route path="/perfil" render={() => <p>Perfil!!!</p>} />
+              </Switch>
+            </div>
+            <div className="app-aside">
+              <Aside />
+            </div>
           </div>
-          <div className="app-main">
-            <Router basename="/vinver/">
-              <Fragment>
-                <Switch>
-                  <Route exact path="/" component={Main} />
-                  <Route path="/perfil" render={() => <p>Perfil!!</p>} />
-                </Switch>
-              </Fragment>
-            </Router>
-            {/* <Main /> */}
-          </div>
-          <div className="app-aside">
-            <Aside />
-          </div>
-        </div>
-      </Fragment>
+        </Fragment>
+      </Router>
     );
   }
 }

@@ -1,6 +1,7 @@
 // React
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // Styles
 import './SideNavItem.css';
@@ -12,16 +13,14 @@ class SideNavItem extends Component {
       title,
       icon,
       info,
-      active,
-      linkTo,
+      to
     } = this.props;
 
     let className = 'side-nav-item';
     className += classes ? ` ${classes}` : '';
-    className += active ? ' side-nav-item--active' : '';
 
     return (
-      <a className={className} href={linkTo}>
+      <NavLink exact to={to} className={className} activeClassName="side-nav-item--active">
         <span className="side-nav-item__icon">{ icon }</span>
         <span className="side-nav-item__title footnote-1 dark-secondary">
           { title }
@@ -31,13 +30,13 @@ class SideNavItem extends Component {
             </span>
           }
         </span>
-      </a>
+      </NavLink>
     );
   }
 }
 
 SideNavItem.propTypes = {
-  linkTo: PropTypes.string,
+  to: PropTypes.string,
   title: PropTypes.string,
   icon: PropTypes.element.isRequired,
   info: PropTypes.string,
@@ -45,7 +44,7 @@ SideNavItem.propTypes = {
 };
 
 SideNavItem.defaultProps = {
-  linkTo: '#',
+  to: '#',
   title: '',
   info: '',
   active: false

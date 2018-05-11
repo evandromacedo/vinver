@@ -74,12 +74,12 @@ class MakePost extends Component {
           />
           {expanded &&
             <div className="make-post__options">
-              <a href="#/"><InsertPhoto fill="grey-5" /></a>
-              <a href="#/"><PieChart fill="grey-5" /></a>
-              <a href="#/"><Link fill="grey-5" /></a>
-              <a href="#/" className="make-post__options__school">
+              <span className="cursor-pointer"><InsertPhoto fill="grey-5" /></span>
+              <span className="cursor-pointer"><PieChart fill="grey-5" /></span>
+              <span className="cursor-pointer"><Link fill="grey-5" /></span>
+              <span className="make-post__options__school cursor-pointer">
                 <School fill="blue-fill" /> <span className="caption-2 dark-disabled">Todas as classes</span>
-              </a>
+              </span>
               <ButtonLight
                 color="blue"
                 title="Publicar"
