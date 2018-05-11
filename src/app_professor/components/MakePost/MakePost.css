@@ -1,0 +1,54 @@
+/* Make Post */
+.make-post {
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  background-color: var(--grey-1);
+  box-shadow: var(--shadow-2);
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: 3.2rem 1fr;
+}
+
+.make-post__user-image {
+  --user-image-url: url(https://static.publicocdn.com/files/starwars/img/luke/02.jpg);
+  border-radius: 8px;
+  width: 100%;
+  height: 3.2rem;
+  background-image: var(--user-image-url);
+  background-size: cover;
+}
+
+.make-post__textarea {
+  resize: none;
+  height: 3.2rem;
+  transition: height ease 0.3s;
+}
+
+.make-post__textarea--expanded {
+  height: 9.6rem;
+  border-color: var(--blue-fill);
+}
+
+/* .make-post__textarea:focus {
+  height: 9.6rem;
+}
+
+.make-post__textarea:focus + .make-post__options {
+  display: grid;
+} */
+
+.make-post__options {
+  display: grid;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  grid-gap: 2.4rem;
+  grid-template-columns: repeat(3, 2.4rem) 1fr 9.6rem;
+  align-items: center;
+}
+
+.make-post__options__school {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: 2.4rem 1fr;
+  align-items: center;
+}

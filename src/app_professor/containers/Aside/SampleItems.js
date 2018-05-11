@@ -3,9 +3,9 @@ import React from 'react';
 
 // Components
 import AsideList from '../../components/AsideList/AsideList';
-import School from '../../components/Icon/School';
-import Stars from '../../components/Icon/Stars';
-import Assignment from '../../components/Icon/Assignment';
+import School from 'common/Icon/School';
+import Stars from 'common/Icon/Stars';
+import Assignment from 'common/Icon/Assignment';
 
 export const Classes = () => (
   <AsideList

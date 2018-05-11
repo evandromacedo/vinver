@@ -1,0 +1,23 @@
+/* Main */
+.main {
+  display: grid;
+  grid-gap: 1.6rem;
+}
+
+.new-post-enter {
+  opacity: 0.01;
+}
+
+.new-post-enter.new-post-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.new-post-leave {
+  opacity: 1;
+}
+
+.new-post-leave.new-post-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

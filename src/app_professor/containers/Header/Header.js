@@ -7,8 +7,8 @@ import './Header.css';
 
 // Components
 import logo from 'static/img/logo.png';
-import InputSearch from '../../components/Input/InputSearch';
-import IconBook from '../../components/Icon/Book';
+import InputSearch from 'common/Input/InputSearch';
+import IconBook from 'common/Icon/Book';
 
 class Header extends Component {
   render() {

@@ -13,10 +13,10 @@ import 'static/font.css';
 import './App.css';
 
 // Containers
-import Header from 'containers/Header/Header';
-import SideNav from 'containers/SideNav/SideNav';
-import Main from 'containers/Main/Main';
-import Aside from 'containers/Aside/Aside';
+import Header from '../Header/Header';
+import SideNav from '../SideNav/SideNav';
+import Main from '../Main/Main';
+import Aside from '../Aside/Aside';
 
 moment.locale('pt-BR');
 

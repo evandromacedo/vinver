@@ -1,0 +1,43 @@
+/* App */
+html {
+  background-color: var(--grey-2);
+}
+
+.app-container {
+  margin: 0 auto;
+  max-width: var(--container-width);
+  padding-bottom: 1.6rem;
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "side-nav main main aside";
+}
+
+.app-side-nav {
+  grid-area: side-nav;
+}
+
+.app-main {
+  grid-area: main;
+}
+
+.app-aside {
+  grid-area: aside;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-areas: "main main main main";
+    padding: 0 1.6rem 1.6rem 1.6rem;
+  }
+
+  .app-side-nav,
+  .app-aside {
+    display: none;
+  }
+}
+
+/* Helpers */
+.cursor-pointer {
+  cursor: pointer;
+}
