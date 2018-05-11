@@ -1,5 +1,5 @@
 // React
-// import AppEstudante from 'app_professor/containers/App/App';
+import AppAluno from 'app_aluno/containers/App/App';
 import AppProfessor from 'app_professor/containers/App/App';
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
@@ -10,7 +10,7 @@ import Assignment from 'common/Icon/Assignment';
 const Routes = () => (
   <Router basename="/vinver">
     <Switch>
-      <Route path="/aluno" render={() => <p>Aluno.</p>} />
+      <Route path="/aluno" component={AppAluno} />
       <Route path="/professor" component={AppProfessor} />
       <Route component={Modulos} />
     </Switch>
