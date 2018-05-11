@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import './Aside.css';
 
 // Components
-import ShortProfile from '../../components/ShortProfile/ShortProfile';
+import ShortProfile from 'app_professor/components/ShortProfile/ShortProfile';
 import { Classes, Projetos, Destaque } from './SampleItems';
 
 class Aside extends Component {

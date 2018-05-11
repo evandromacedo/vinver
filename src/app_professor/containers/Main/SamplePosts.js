@@ -1,7 +1,7 @@
 // React
 import React, { Fragment } from 'react';
 
-import Post from '../../components/Post/Post';
+import Post from 'app_professor/components/Post/Post';
 
 const posts = [
   {

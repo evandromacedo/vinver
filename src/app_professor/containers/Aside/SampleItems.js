@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import AsideList from '../../components/AsideList/AsideList';
+import AsideList from 'app_professor/components/AsideList/AsideList';
 import School from 'common/Icon/School';
 import Stars from 'common/Icon/Stars';
 import Assignment from 'common/Icon/Assignment';

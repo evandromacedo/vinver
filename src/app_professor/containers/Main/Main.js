@@ -9,8 +9,8 @@ import shortid from 'shortid';
 
 // Components
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Post from '../../components/Post/Post';
-import MakePost from '../../components/MakePost/MakePost';
+import Post from 'app_professor/components/Post/Post';
+import MakePost from 'app_professor/components/MakePost/MakePost';
 import SamplePosts from './SamplePosts';
 
 class Main extends Component {

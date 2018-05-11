@@ -6,7 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 import './SideNav.css';
 
 // Components
-import SideNavItem from '../../components/SideNavItem/SideNavItem';
+import SideNavItem from 'app_professor/components/SideNavItem/SideNavItem';
 import Home from 'common/Icon/Home';
 import Person from 'common/Icon/Person';
 import Notifications from 'common/Icon/Notifications';
