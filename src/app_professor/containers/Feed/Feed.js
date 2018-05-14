@@ -28,8 +28,6 @@ class Feed extends Component {
   }
 
   render() {
-    console.log(this.props);
-
     const { posts } = this.state;
 
     const classe = {
@@ -60,7 +58,7 @@ class Feed extends Component {
               texto={post.texto}
             />
           ))}
-          <SamplePosts />
+          <SamplePosts type={this.props.match.url === '/perfil' ? 'perfil' : 'all'} />
         </ReactCSSTransitionGroup>
       </section>
     );

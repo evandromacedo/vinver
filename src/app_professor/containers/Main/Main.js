@@ -18,7 +18,7 @@ class Main extends Component {
         <div className="feed-area">
           <Switch>
             <Route exact path="/" component={Feed} />
-            <Route path="/perfil" render={() => <p>feed só dos dele</p>} />
+            <Route path="/perfil" component={Feed} />
           </Switch>
         </div>
 

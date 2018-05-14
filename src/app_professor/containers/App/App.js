@@ -40,21 +40,3 @@ class App extends Component {
 }
 
 export default App;
-
-class Perfil extends Component {
-  render() {
-    return (
-      <Router basename="/vinver/professor/perfil">
-        <Route path="/" component={Perfilzao} />
-      </Router>
-    );
-  }
-}
-
-class Perfilzao extends Component {
-  render() {
-    return (
-      <p>{ this.props.match.url }</p>
-    );
-  }
-}
