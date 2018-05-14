@@ -29,6 +29,7 @@ class Feed extends Component {
 
   render() {
     const { posts } = this.state;
+    const type = this.props.match.params.type === 'perfil' ? 'perfil' : 'all';
 
     const classe = {
       materia: 'Mecânica',
@@ -58,7 +59,7 @@ class Feed extends Component {
               texto={post.texto}
             />
           ))}
-          <SamplePosts type={this.props.match.url === '/perfil' ? 'perfil' : 'all'} />
+          <SamplePosts type={type} />
         </ReactCSSTransitionGroup>
       </section>
     );

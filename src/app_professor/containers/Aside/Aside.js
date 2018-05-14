@@ -1,5 +1,6 @@
 // React
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Styles
 import './Aside.css';
@@ -34,9 +35,13 @@ class Aside extends Component {
   }
 
   render() {
+    const { page } = this.props.match.params;
+
     return (
       <aside className="aside">
-        <ShortProfile {...this.getUserInfo()} />
+        {page !== 'perfil' &&
+          <ShortProfile {...this.getUserInfo()} />
+        }
         <Classes />
         <Projetos />
         <Destaque />
@@ -45,4 +50,4 @@ class Aside extends Component {
   }
 }
 
-export default Aside;
+export default withRouter(Aside);

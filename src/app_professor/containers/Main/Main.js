@@ -1,6 +1,6 @@
 // React
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 // Styles
 import './Main.css';
@@ -14,16 +14,11 @@ class Main extends Component {
     return (
       <main className="main">
         <Route path="/perfil" render={() => <div className="perfil-area">asdasdas</div>} />
-
         <div className="feed-area">
-          <Switch>
-            <Route exact path="/" component={Feed} />
-            <Route path="/perfil" component={Feed} />
-          </Switch>
+          <Route path="/:type?" component={Feed} />
         </div>
-
         <div className="aside-area">
-          <Aside />
+          <Route path="/:page?" component={Aside} />
         </div>
       </main>
     );
@@ -31,21 +26,3 @@ class Main extends Component {
 }
 
 export default Main;
-
-// class Perfil extends Component {
-//   render() {
-//     return (
-//       <Router basename="/vinver/professor/perfil">
-//         <Route path="/" component={Perfilzao} />
-//       </Router>
-//     );
-//   }
-// }
-
-// class Perfilzao extends Component {
-//   render() {
-//     return (
-//       <p>{ this.props.match.url }</p>
-//     );
-//   }
-// }
