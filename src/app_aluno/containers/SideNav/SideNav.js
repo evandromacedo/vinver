@@ -24,54 +24,78 @@ class SideNav extends Component {
         <ul className="side-nav__nav-list">
           <li>
             <SideNavItem
+              className="side-nav-item__aluno"
               title="Home"
               exact
               to="/"
-              icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />}
+              icon={<Home fill={url === '/' ? 'orange-fill' : 'grey-8'} />}
             />
           </li>
           <li>
             <SideNavItem
+              className="side-nav-item__aluno"
               title="Perfil"
               to="/perfil"
-              icon={<Person fill={url === '/perfil' ? 'blue-fill' : 'grey-7'} />}
+              icon={<Person fill={url === '/perfil' ? 'orange-fill' : 'grey-8'} />}
             />
           </li>
           <li>
-            <SideNavItem title="Notificações" icon={<Notifications fill="grey-7" />} info="12" />
+            <SideNavItem
+              className="side-nav-item__aluno"
+              title="Notificações"
+              icon={<Notifications fill="grey-8" />}
+              info="12"
+            />
           </li>
           <li>
-            <SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" />
+            <SideNavItem
+              className="side-nav-item__aluno"
+              title="Mensagens"
+              icon={<Chat fill="grey-8" />}
+              info="4"
+            />
           </li>
           <li>
-            <SideNavItem title="Metas" icon={<Book fill="grey-7" />} />
+            <SideNavItem
+              className="side-nav-item__aluno"
+              title="Metas"
+              icon={<Book fill="grey-8" />}
+            />
           </li>
           <li>
-            <SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} />
+            <SideNavItem
+              className="side-nav-item__aluno"
+              title="Plataforma Vinver"
+              icon={<Dashboard fill="grey-8" />}
+            />
           </li>
         </ul>
 
         <ul>
           <li>
-            <SideNavItem title="Sair" icon={<Exit fill="grey-7" />} />
+            <SideNavItem
+              className="side-nav-item__aluno"
+              title="Sair"
+              icon={<Exit fill="grey-8" />}
+            />
           </li>
           <li>
-            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 light-secondary">
               Ajuda & FAQ
             </Link>
           </li>
           <li>
-            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 light-secondary">
               Sobre a plataforma
             </Link>
           </li>
           <li>
-            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 light-secondary">
               Termos de uso
             </Link>
           </li>
           <li>
-            <Link to="#" className="side-nav__footer-link caption-2 dark-secondary">
+            <Link to="#" className="side-nav__footer-link caption-2 light-secondary">
               Política de Privacidade
             </Link>
           </li>
