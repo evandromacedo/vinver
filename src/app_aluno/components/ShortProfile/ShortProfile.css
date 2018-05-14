@@ -1,0 +1,40 @@
+/* Short Profile */
+.short-profile {
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  display: grid;
+  grid-gap: 1.6rem;
+  background-color: var(--grey-9);
+}
+
+.short-profile__usuario {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: 5.6rem 1fr;
+}
+
+.short-profile__usuario__imagem {
+  border-radius: 1.6rem;
+  width: 100%;
+  height: 5.6rem;
+}
+
+.short-profile__usuario__info {
+  display: grid;
+  align-content: center;
+}
+
+.short-profile__usuario__info > p {
+  line-height: 2rem;
+}
+
+.short-profile__dados {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.short-profile__dados__value {
+  justify-self: end;
+}

@@ -8,7 +8,7 @@ import './Main.css';
 // Components
 // import Profile from 'app_aluno/components/Profile/Profile';
 import Feed from 'app_aluno/containers/Feed/Feed';
-// import Aside from 'app_aluno/containers/Aside/Aside';
+import Aside from 'app_aluno/containers/Aside/Aside';
 
 class Main extends Component {
   render() {
@@ -29,7 +29,7 @@ class Main extends Component {
           <Route path="/:type?" component={Feed} />
         </div>
         <div className="aside-area">
-          {/* <Route path="/:page?" component={Aside} /> */}
+          <Route path="/:page?" component={Aside} />
         </div>
       </main>
     );
