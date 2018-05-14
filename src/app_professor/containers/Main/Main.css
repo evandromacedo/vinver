@@ -12,3 +12,13 @@
 .feed-area {
   grid-column: span 2;
 }
+
+@media (max-width: 768px) {
+  .feed-area {
+    grid-column: 1 / -1;
+  }
+
+  .aside-area {
+    display: none;
+  }
+}

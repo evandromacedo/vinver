@@ -7,6 +7,9 @@
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: 3.2rem 1fr;
+
+  /* Vai mudar */
+  overflow: auto;
 }
 
 .make-post__user-image {

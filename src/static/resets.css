@@ -46,6 +46,15 @@ a {
 input {
   outline-width: 0.3em;
   outline-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .input:disabled {

@@ -30,16 +30,19 @@ class MakePost extends Component {
     else {
       if (this.state.expanded) {
         this.setState({ expanded: false });
+        this.textarea.blur();
       }
     }
   }
 
   componentDidMount() {
     document.addEventListener('click', this.hideOnClickOutside);
+    document.addEventListener('touchend', this.hideOnClickOutside);
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.hideOnClickOutside);
+    document.removeEventListener('touchend', this.hideOnClickOutside);
   }
 
   updateText = (e) => {
@@ -66,6 +69,7 @@ class MakePost extends Component {
         <div className="make-post__user-image"></div>
         <div>
           <textarea
+            ref={node => this.textarea = node}
             value={this.state.text}
             onChange={this.updateText}
             rows="1"
