@@ -1,0 +1,52 @@
+.post {
+  box-shadow: var(--shadow-1);
+  border-radius: 4px;
+  background-color: var(--grey-9);
+}
+
+.post__header {
+  padding: 1rem 1.6rem;
+  border-bottom: 1px solid var(--grey-8);
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: auto 1fr auto;
+}
+
+.post__body {
+  padding: 1.6rem;
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: 5.6rem 1fr;
+}
+
+.post__body__info {
+  display: grid;
+  grid-gap: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.post__body__imagem {
+  border-radius: 1.6rem;
+  width: 100%;
+  height: 5.6rem;
+}
+
+.post__body__info__text {
+  font-family: "Open Sans";
+}
+
+.post__body__footer {
+  grid-column-start: 2;
+  display: grid;
+  grid-gap: 2.6rem;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+}
+
+.post__body__footer__item {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2.4rem auto;
+  align-items: center;
+  cursor: pointer;
+}
