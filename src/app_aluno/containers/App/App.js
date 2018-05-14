@@ -13,7 +13,7 @@ import 'static/font.css';
 import './App.css';
 
 // Containers
-import Header from 'app_professor/containers/Header/Header';
+import Header from 'app_aluno/containers/Header/Header';
 
 moment.locale('pt-BR');
 

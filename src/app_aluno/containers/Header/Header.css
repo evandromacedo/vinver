@@ -2,7 +2,7 @@
 .header {
   width: 100%;
   height: 8rem;
-  background-color: var(--grey-1);
+  background-color: var(--grey-9);
   box-shadow: 0 12px 16px -4px rgba(33,37,41,0.08);
   margin-bottom: 1.6rem;
 }
@@ -26,11 +26,6 @@
   grid-area: center;
 }
 
-.header-right {
-  grid-area: right;
-  justify-self: end;
-}
-
 @media (max-width: 768px) {
   .header-wrapper {
     grid-template-areas: "left center center center";
@@ -39,25 +34,9 @@
   .header-center {
     margin-right: 1.6rem;
   }
-
-  .header-right {
-    display: none;
-  }
 }
 
 .header-left__logo {
   margin-left: 1.2rem;
   display: inline-block;
-}
-
-.header-right__meta-icon {
-  display: grid;
-  margin-right: 1.6rem;
-}
-
-.header-right__meta {
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 2rem;
-  align-items: center;
 }

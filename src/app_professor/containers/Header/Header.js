@@ -6,9 +6,9 @@ import React, { Component } from 'react';
 import './Header.css';
 
 // Components
-import logo from 'static/img/logo.png';
 import InputSearch from 'common/Input/InputSearch';
 import IconBook from 'common/Icon/Book';
+import Logo from 'common/Icon/Logo';
 
 class Header extends Component {
   render() {
@@ -17,7 +17,7 @@ class Header extends Component {
         <div className="header-wrapper">
           <div className="header-left">
             <a className="header-left__logo" href="http://evandromacedo.com/vinver/">
-              <img src={logo} alt="Logo" />
+              <Logo fill="blue-fill" />
             </a>
           </div>
           <div className="header-center">

@@ -69,3 +69,12 @@
 .input-search::placeholder {
   color: var(--dark-disabled);
 }
+
+.input-search__aluno {
+  background-color: var(--grey-10);
+  color: var(--light-primary);
+}
+
+.input-search__aluno::placeholder {
+  color: var(--light-disabled);
+}
