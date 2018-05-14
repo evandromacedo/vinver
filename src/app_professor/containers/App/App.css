@@ -10,19 +10,15 @@ html {
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "side-nav main main aside";
+  grid-template-areas: "side-nav main main main";
 }
 
-.app-side-nav {
-  grid-area: side-nav;
-}
-
-.app-main {
+.main-area {
   grid-area: main;
 }
 
-.app-aside {
-  grid-area: aside;
+.side-nav-area {
+  grid-area: side-nav;
 }
 
 @media (max-width: 768px) {
@@ -31,8 +27,7 @@ html {
     padding: 0 1.6rem 1.6rem 1.6rem;
   }
 
-  .app-side-nav,
-  .app-aside {
+  .side-nav-area {
     display: none;
   }
 }

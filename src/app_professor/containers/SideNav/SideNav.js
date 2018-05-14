@@ -19,8 +19,6 @@ class SideNav extends Component {
   render() {
     const { url } = this.props.match;
 
-    console.log(this.props.match);
-
     return (
       <aside className="side-nav">
         <ul className="side-nav__nav-list">

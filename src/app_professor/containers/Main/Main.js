@@ -1,67 +1,51 @@
 // React
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 // Styles
 import './Main.css';
 
-// Libs
-import shortid from 'shortid';
-
 // Components
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Post from 'app_professor/components/Post/Post';
-import MakePost from 'app_professor/components/MakePost/MakePost';
-import SamplePosts from './SamplePosts';
+import Feed from 'app_professor/containers/Feed/Feed';
+import Aside from 'app_professor/containers/Aside/Aside';
 
 class Main extends Component {
-  state = {
-    posts: []
-  }
-
-  addPost = (texto) => {
-    const posts = [
-      { id: shortid.generate(), texto },
-      ...this.state.posts
-    ];
-    this.setState({ posts });
-  }
-
   render() {
-    const { posts } = this.state;
-
-    const classe = {
-      materia: 'Mecânica',
-      turma: 'Física - EM - 2º ano A'
-    };
-
-    const usuario = {
-      imagem: 'https://static.publicocdn.com/files/starwars/img/luke/02.jpg',
-      nome: 'Obi-Wan Kenobi',
-      id: '@benkenobi'
-    };
-
     return (
       <main className="main">
-        <MakePost addPost={this.addPost} />
-        <ReactCSSTransitionGroup
-          className="main"
-          transitionName="new-post"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-        >
-          {posts.map((post, index) => (
-            <Post
-              key={post.id}
-              classe={classe}
-              usuario={usuario}
-              texto={post.texto}
-            />
-          ))}
-          <SamplePosts />
-        </ReactCSSTransitionGroup>
+        <Route path="/perfil" render={() => <div className="perfil-area">asdasdas</div>} />
+
+        <div className="feed-area">
+          <Switch>
+            <Route exact path="/" component={Feed} />
+            <Route path="/perfil" render={() => <p>feed só dos dele</p>} />
+          </Switch>
+        </div>
+
+        <div className="aside-area">
+          <Aside />
+        </div>
       </main>
     );
   }
 }
 
 export default Main;
+
+// class Perfil extends Component {
+//   render() {
+//     return (
+//       <Router basename="/vinver/professor/perfil">
+//         <Route path="/" component={Perfilzao} />
+//       </Router>
+//     );
+//   }
+// }
+
+// class Perfilzao extends Component {
+//   render() {
+//     return (
+//       <p>{ this.props.match.url }</p>
+//     );
+//   }
+// }

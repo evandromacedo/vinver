@@ -2,22 +2,14 @@
 .main {
   display: grid;
   grid-gap: 1.6rem;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.new-post-enter {
-  opacity: 0.01;
+.perfil-area {
+  background-color: red;
+  grid-column: 1 / -1;
 }
 
-.new-post-enter.new-post-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.new-post-leave {
-  opacity: 1;
-}
-
-.new-post-leave.new-post-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+.feed-area {
+  grid-column: span 2;
 }
