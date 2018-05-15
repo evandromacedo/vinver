@@ -1,0 +1,26 @@
+/* Habilidades */
+.aside-habilidades {
+  padding: 1.6rem;
+  background-color: var(--grey-9);
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 1.6rem;
+}
+
+.aside-habilidades__list {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(auto-fill, 48px);
+}
+
+.aside-habilidades__habilidade {
+  --fill: var(--grey-8);
+  background-color: var(--fill);
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}

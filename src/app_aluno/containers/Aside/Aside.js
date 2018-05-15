@@ -8,7 +8,7 @@ import './Aside.css';
 // Components
 import ShortProfile from 'app_aluno/components/ShortProfile/ShortProfile';
 import { Classes, Destaque, RedesSociais } from './SampleItems';
-import Habilidades from './Habilidades';
+import AsideHabilidades from 'app_aluno/components/AsideHabilidades/AsideHabilidades';
 
 class Aside extends Component {
   getUserInfo() {
@@ -81,7 +81,7 @@ class Aside extends Component {
           )} />
           <Route path="/perfil" render={() => (
             <Fragment>
-              <Habilidades habilidades={this.getHabilidades()}/>
+              <AsideHabilidades habilidades={this.getHabilidades()}/>
               <RedesSociais />
             </Fragment>
           )} />

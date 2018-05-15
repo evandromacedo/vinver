@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Styles
-import './Aside.css';
+import './AsideHabilidades.css';
 
-const Habilidades = ({ habilidades = [] }) => (
+const AsideHabilidades = ({ habilidades = [] }) => (
   <div className="aside-habilidades">
     <p className="headline light-primary">Habilidades</p>
     <div className="aside-habilidades__list">
@@ -22,11 +22,11 @@ const Habilidades = ({ habilidades = [] }) => (
   </div>
 );
 
-Habilidades.propTypes = {
+AsideHabilidades.propTypes = {
   habilidades: PropTypes.arrayOf(PropTypes.shape({
     fill: PropTypes.string,
     shape: PropTypes.any
   }))
 };
 
-export default Habilidades;
+export default AsideHabilidades;
