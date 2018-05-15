@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import './MakePost.css';
 
 // Components
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ButtonLight from 'common/Button/ButtonLight';
 import InsertPhoto from 'common/Icon/InsertPhoto';
 import PieChart from 'common/Icon/PieChart';
@@ -76,21 +77,27 @@ class MakePost extends Component {
             className={`input make-post__textarea ${expanded ? 'input make-post__textarea--expanded' : ''}`}
             placeholder="Sobre o que você está pensando?"
           />
-          {expanded &&
-            <div className="make-post__options">
-              <span className="cursor-pointer"><InsertPhoto fill="grey-5" /></span>
-              <span className="cursor-pointer"><PieChart fill="grey-5" /></span>
-              <span className="cursor-pointer"><Link fill="grey-5" /></span>
-              <span className="make-post__options__school cursor-pointer">
-                <School fill="blue-fill" /> <span className="caption-2 dark-disabled">Todas as classes</span>
-              </span>
-              <ButtonLight
-                color="blue"
-                title="Publicar"
-                onClick={this.publicar}
-              />
-            </div>
-          }
+          <ReactCSSTransitionGroup
+            transitionName="post-options"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            {expanded &&
+              <div className="make-post__options">
+                <span className="cursor-pointer"><InsertPhoto fill="grey-5" /></span>
+                <span className="cursor-pointer"><PieChart fill="grey-5" /></span>
+                <span className="cursor-pointer"><Link fill="grey-5" /></span>
+                <span className="make-post__options__school cursor-pointer">
+                  <School fill="blue-fill" /> <span className="caption-2 dark-disabled">Todas as classes</span>
+                </span>
+                <ButtonLight
+                  color="blue"
+                  title="Publicar"
+                  onClick={this.publicar}
+                />
+              </div>
+            }
+          </ReactCSSTransitionGroup>
         </div>
       </div>
     );

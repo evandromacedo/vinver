@@ -62,3 +62,22 @@
   grid-template-columns: 2.4rem 1fr;
   align-items: center;
 }
+
+.post-options-enter {
+  opacity: 0.01;
+}
+
+.post-options-enter.post-options-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.post-options-leave {
+  opacity: 1;
+}
+
+.post-options-leave.post-options-leave-active {
+  opacity: 0.01;
+  display: none;
+  transition: opacity 300ms ease-in;
+}
