@@ -35,8 +35,9 @@ class Aside extends Component {
 
     return (
       <aside className="aside">
-        {page !== 'perfil' &&
-          <ShortProfile {...this.getUserInfo()} />
+        {page !== 'perfil' ?
+          <ShortProfile {...this.getUserInfo()} /> :
+          <p>:D</p>
         }
         <Classes />
         <Destaque />

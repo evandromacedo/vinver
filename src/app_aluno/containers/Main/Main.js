@@ -1,12 +1,13 @@
 // React
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 // Styles
 import './Main.css';
 
 // Components
 import Profile from 'app_aluno/components/Profile/Profile';
+import Perfil from 'app_aluno/containers/Perfil/Perfil';
 import Feed from 'app_aluno/containers/Feed/Feed';
 import Aside from 'app_aluno/containers/Aside/Aside';
 
@@ -25,7 +26,10 @@ class Main extends Component {
       <main className="main">
         <Route path="/perfil" render={() => <Profile { ...profileProps } />} />
         <div className="feed-area">
-          <Route path="/:type?" component={Feed} />
+          <Switch>
+            <Route exact path="/" component={Feed} />
+            <Route path="/perfil" component={Perfil} />
+          </Switch>
         </div>
         <div className="aside-area">
           <Route path="/:page?" component={Aside} />

@@ -1,0 +1,69 @@
+/* Perfil */
+.perfil {
+  display: grid;
+  grid-gap: 1.6rem;
+}
+
+/* Conquistas */
+.perfil-conquistas {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--grey-9);
+}
+
+.perfil-conquistas__title {
+  margin-bottom: 1.6rem;
+}
+
+.perfil-conquistas__wrap {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  align-items: center;
+}
+
+.perfil-conquistas__list {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 56px));
+}
+
+.perfil-conquistas__conquista {
+  --fill: var(--grey-8);
+  background-color: var(--fill);
+  border-radius: 16px;
+  height: 56px;
+  width: 56px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+/* Metas */
+.perfil-metas {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--grey-9);
+}
+
+.perfil-metas__title {
+  margin-bottom: 1.6rem;
+}
+
+.perfil-metas__list {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 56px));
+}
+
+.perfil-metas__meta {
+  --fill: var(--grey-8);
+  background-color: var(--fill);
+  border-radius: 16px;
+  height: 56px;
+  width: 56px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
