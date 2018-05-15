@@ -31,14 +31,14 @@
   background-color: var(--grey-9);
 }
 
-.side-nav-item__aluno--active > .side-nav-item__aluno__title {
-  color: var(--light-primary);
-}
-
 .side-nav-item__aluno .side-nav-item__title {
   color: var(--light-secondary);
 }
 
 .side-nav-item__aluno .side-nav-item__title__info {
   color: var(--light-disabled);
+}
+
+.side-nav-item__aluno.side-nav-item--active > .side-nav-item__title {
+  color: var(--light-primary);
 }

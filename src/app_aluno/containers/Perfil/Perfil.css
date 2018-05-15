@@ -9,6 +9,7 @@
   width: 100%;
   padding: 1.6rem;
   background-color: var(--grey-9);
+  border-radius: 4px;
 }
 
 .perfil-conquistas__title {
@@ -44,6 +45,7 @@
   width: 100%;
   padding: 1.6rem;
   background-color: var(--grey-9);
+  border-radius: 4px;
 }
 
 .perfil-metas__title {

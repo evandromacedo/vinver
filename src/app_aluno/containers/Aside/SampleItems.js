@@ -64,3 +64,36 @@ export const Destaque = () => (
     ]}
   />
 );
+
+export const RedesSociais = () => (
+  <AsideList
+    titulo="Redes Sociais"
+    itens={[
+      {
+        materia: 'Tumblr',
+        turma: '@luke.skywalker',
+        icon: <p className="title-2 light-primary">ⓣ</p> // eslint-disable-line
+      },
+      {
+        materia: 'Twitter',
+        turma: '@luke.skywalker',
+        icon: <p className="title-2 light-primary">Ⓣ</p> // eslint-disable-line
+      },
+      {
+        materia: 'Instagram',
+        turma: '@luke.skywalker',
+        icon: <p className="title-2 light-primary">ⓘ</p> // eslint-disable-line
+      },
+      {
+        materia: 'Facebook',
+        turma: '@luke.skywalker',
+        icon: <p className="title-2 light-primary">ⓕ</p> // eslint-disable-line
+      },
+      {
+        materia: 'Spotify',
+        turma: '@luke.skywalker',
+        icon: <p className="title-2 light-primary">ⓢ</p> // eslint-disable-line
+      }
+    ]}
+  />
+);
