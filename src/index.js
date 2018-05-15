@@ -9,8 +9,9 @@ import 'static/resets.css';
 import 'static/variables.css';
 import 'static/font.css';
 
-// Se tiver no path '/vinver/' apenas
+// Se tiver no path '/vinver/' ou root
 if (
+  window.location.pathname === '/' ||
   window.location.pathname === '/vinver' ||
   window.location.pathname === '/vinver/'
 ) {

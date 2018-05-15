@@ -15,7 +15,7 @@ class Header extends Component {
       <header className="header">
         <div className="header-wrapper">
           <div className="header-left">
-            <a className="header-left__logo" href="http://evandromacedo.com/vinver/">
+            <a className="header-left__logo" href="/vinver">
               <Logo fill="orange-fill" />
             </a>
           </div>
