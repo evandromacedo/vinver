@@ -19,8 +19,18 @@ class Chat extends Component {
     mensagens: []
   };
 
+  componentDidMount() {
+    this.chatBody.scrollTop = this.chatBody.scrollHeight;
+  }
+
   updateText = (e) => {
     this.setState({ text: e.target.value });
+  }
+
+  checkEnterKey = (e) => {
+    if (e.keyCode === 13) {
+      return this.sendMessage();
+    }
   }
 
   sendMessage = () => {
@@ -41,9 +51,9 @@ class Chat extends Component {
       this.setState({
         text: '',
         mensagens
+      }, () => {
+        this.chatBody.scrollTop = this.chatBody.scrollHeight;
       });
-
-      this.chatBody.scrollTop = this.chatBody.scrollHeight;
     }
   }
 
@@ -91,6 +101,7 @@ class Chat extends Component {
             placeholder={`Enviar mensagem para #${title}`}
             value={this.state.text}
             onChange={this.updateText}
+            onKeyDown={this.checkEnterKey}
           />
           <p
             onClick={this.sendMessage}

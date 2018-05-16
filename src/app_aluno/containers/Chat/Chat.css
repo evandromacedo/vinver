@@ -40,7 +40,7 @@
 
 /* Chat Body */
 .chat__body {
-  padding: 17rem 1.6rem 1.6rem 1.6rem;
+  padding: 16.8rem 1.6rem 1.6rem 1.6rem;
   overflow: auto;
   display: grid;
   grid-gap: 1.6rem;
