@@ -8,6 +8,7 @@ import Stars from 'common/Icon/Stars';
 import AsideHabilidades from 'app_aluno/components/AsideHabilidades/AsideHabilidades';
 import AsideProfile from 'app_aluno/components/AsideProfile/AsideProfile';
 import AsideCanais from 'app_aluno/components/AsideCanais/AsideCanais';
+import AsideMensagens from 'app_aluno/components/AsideMensagens/AsideMensagens';
 
 export const Classes = () => (
   <AsideList
@@ -174,24 +175,60 @@ export const Canais = () => (
       {
         fill: 'red-fill',
         title: 'jeditempleguard',
-        lastMessage: '@x-wing · The respective Jedi who made',
+        lastMessage: '@windu.m · The respective Jedi who made',
         hasMessage: true
       },
       {
         fill: 'green-fill',
         title: 'coruscant-temple',
-        lastMessage: '@x-wing · At different times the galaxy',
+        lastMessage: '@skywalker · At different times the galaxy',
         hasMessage: true
       },
       {
         fill: 'blue-fill',
         title: 'jedihighcouncil',
-        lastMessage: '@x-wing · Unknown to the Jedi powers'
+        lastMessage: '@benkenobi · Unknown to the Jedi powers'
       },
       {
         fill: 'pink-fill',
         title: 'off',
-        lastMessage: '@x-wing · From the remmants of the guilds'
+        lastMessage: '@rey · From the remmants of the guilds'
+      }
+    ]}
+  />
+);
+
+export const Mensagens = () => (
+  <AsideMensagens
+    mensagens={[
+      {
+        user: 'benkenobi',
+        lastMessage: 'Nearly a thousand years lorem ipsum',
+        hasMessage: true,
+        urlImagem: 'https://topicimages.mrowl.com/large/jack_attack/the_force_is_strong/characters/prequeltrilogy/obi_wankenobi__1.jpg'
+      },
+      {
+        user: 'windu.m',
+        lastMessage: 'As the Republic became lorem ipsun',
+        hasMessage: true,
+        urlImagem: 'https://cdn.movieweb.com/img.news/NExUmTtbPVqVBF_1_1.jpg'
+      },
+      {
+        user: 'skywalker',
+        lastMessage: 'The Jedi Order aided the lorem ipsun',
+        hasMessage: true,
+        urlImagem: 'https://upload.wikimedia.org/wikipedia/pt/7/74/Anakin-Jedi.jpg'
+      },
+      {
+        user: 'x-wing',
+        lastMessage: 'The Senate thereafter elected lorem ipsun',
+        urlImagem: 'https://pbs.twimg.com/profile_images/679543350630825984/fRn2iH-l.png'
+      },
+      {
+        fill: 'pink-fill',
+        user: 'rey',
+        lastMessage: 'Prior to the Invasion of Naboo, lorem ipsun',
+        urlImagem: ''
       }
     ]}
   />
