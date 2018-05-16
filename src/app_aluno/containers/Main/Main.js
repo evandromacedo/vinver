@@ -10,6 +10,7 @@ import Profile from 'app_aluno/components/Profile/Profile';
 import Perfil from 'app_aluno/containers/Perfil/Perfil';
 import Feed from 'app_aluno/containers/Feed/Feed';
 import Aside from 'app_aluno/containers/Aside/Aside';
+import Chat from 'app_aluno/containers/Chat/Chat';
 
 class Main extends Component {
   render() {
@@ -29,6 +30,7 @@ class Main extends Component {
           <Switch>
             <Route exact path="/" component={Feed} />
             <Route path="/perfil" component={Perfil} />
+            <Route path="/mensagens" component={Chat} />
           </Switch>
         </div>
         <div className="aside-area">

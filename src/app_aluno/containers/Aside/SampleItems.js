@@ -190,7 +190,7 @@ export const Canais = () => (
         lastMessage: '@benkenobi · Unknown to the Jedi powers'
       },
       {
-        fill: 'pink-fill',
+        fill: 'yellow-fill',
         title: 'off',
         lastMessage: '@rey · From the remmants of the guilds'
       }

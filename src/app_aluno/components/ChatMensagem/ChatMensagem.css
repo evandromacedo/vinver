@@ -1,0 +1,19 @@
+/* Chat Mensagem */
+.chat-mensagem {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: 32px 1fr;
+  align-items: end;
+}
+
+.chat-mensagem__imagem {
+  border-radius: 8px;
+}
+
+.chat-mensagem__mensagem {
+  padding: 1.6rem;
+  background-color: var(--grey-10);
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 0.8rem;
+}

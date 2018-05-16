@@ -20,6 +20,21 @@
   border-color: var(--blue-fill);
 }
 
+.input--light {
+  color: var(--grey-6);
+  border-color: var(--grey-8);
+  background-color: var(--grey-9);
+  caret-color: var(--orange-fill);
+}
+
+.input--light::placeholder {
+  color: var(--grey-8);
+}
+
+.input--light:focus {
+  border-color: var(--orange-fill);
+}
+
 .input:disabled,
 .input--disabled {
   cursor: not-allowed;
