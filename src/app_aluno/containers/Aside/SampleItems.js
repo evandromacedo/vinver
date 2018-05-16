@@ -7,6 +7,7 @@ import School from 'common/Icon/School';
 import Stars from 'common/Icon/Stars';
 import AsideHabilidades from 'app_aluno/components/AsideHabilidades/AsideHabilidades';
 import AsideProfile from 'app_aluno/components/AsideProfile/AsideProfile';
+import AsideCanais from 'app_aluno/components/AsideCanais/AsideCanais';
 
 export const Classes = () => (
   <AsideList
@@ -160,3 +161,38 @@ export const ShortProfile = () => {
 
   return <AsideProfile {...userInfo} />
 };
+
+export const Canais = () => (
+  <AsideCanais
+    canais={[
+      {
+        fill: 'grey-6',
+        title: 'general',
+        lastMessage: '@x-wing · An ensuing pearing',
+        hasMessage: true
+      },
+      {
+        fill: 'red-fill',
+        title: 'jeditempleguard',
+        lastMessage: '@x-wing · The respective Jedi who made',
+        hasMessage: true
+      },
+      {
+        fill: 'green-fill',
+        title: 'coruscant-temple',
+        lastMessage: '@x-wing · At different times the galaxy',
+        hasMessage: true
+      },
+      {
+        fill: 'blue-fill',
+        title: 'jedihighcouncil',
+        lastMessage: '@x-wing · Unknown to the Jedi powers'
+      },
+      {
+        fill: 'pink-fill',
+        title: 'off',
+        lastMessage: '@x-wing · From the remmants of the guilds'
+      }
+    ]}
+  />
+);

@@ -61,3 +61,10 @@
   /* Container */
   --container-width: 113.6rem;
 }
+
+/* Helpers */
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

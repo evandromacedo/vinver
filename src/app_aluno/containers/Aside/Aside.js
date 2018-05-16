@@ -11,7 +11,8 @@ import {
   Classes,
   Destaque,
   RedesSociais,
-  Habilidades
+  Habilidades,
+  Canais
 } from './SampleItems';
 
 class Aside extends Component {
@@ -30,6 +31,11 @@ class Aside extends Component {
             <Fragment>
               <Habilidades />
               <RedesSociais />
+            </Fragment>
+          )} />
+          <Route path="/mensagens" render={() => (
+            <Fragment>
+              <Canais />
             </Fragment>
           )} />
         </Switch>

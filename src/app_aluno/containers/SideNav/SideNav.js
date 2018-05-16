@@ -12,7 +12,6 @@ import Person from 'common/Icon/Person';
 import Notifications from 'common/Icon/Notifications';
 import Chat from 'common/Icon/Chat';
 import Book from 'common/Icon/Book';
-import Dashboard from 'common/Icon/Dashboard';
 import Exit from 'common/Icon/Exit';
 import Stars from 'common/Icon/Stars';
 
@@ -53,7 +52,7 @@ class SideNav extends Component {
               className="side-nav-item__aluno"
               title="Mensagens"
               to="/mensagens"
-              icon={<Chat fill="grey-8" />}
+              icon={<Chat fill={url === '/mensagens' ? 'orange-fill' : 'grey-8'} />}
               info="4"
             />
           </li>

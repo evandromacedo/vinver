@@ -5,17 +5,31 @@ import PropTypes from 'prop-types';
 // Styles
 import './AsideCanais.css';
 
-const AsideCanais = ({ habilidades = [] }) => (
-  <div className="aside-habilidades">
-    <p className="headline light-primary">Habilidades</p>
-    <div className="aside-habilidades__list">
-      {habilidades.map((habilidade, index) => (
+// Components
+import Comment from 'common/Icon/Comment';
+
+const AsideCanais = ({ canais = [] }) => (
+  <div className="aside-canais">
+    <p className="headline light-primary">Canais</p>
+    <div className="aside-canais__list">
+      {canais.map((canal, index) => (
         <div
           key={index}
-          style={{ '--fill': `var(--${habilidade.fill})` }}
-          className="aside-habilidades__habilidade"
+          style={{ '--fill': `var(--${canal.fill || 'grey-6'})` }}
+          className="aside-canais__canal"
         >
-          { habilidade.shape }
+          <div className="aside-canais__canal__fill" />
+          <div className="aside-canais__canal__descricao">
+            <p className="footnote-1 light-primary truncate">
+              #{ canal.title }
+            </p>
+            <p className={`footnote-2 truncate
+              ${canal.hasMessage ? 'light-secondary' : 'light-disabled'}
+            `}>
+              { canal.lastMessage }
+            </p>
+          </div>
+          {canal.hasMessage && <Comment fill="orange-fill" />}
         </div>
       ))}
     </div>
@@ -24,8 +38,11 @@ const AsideCanais = ({ habilidades = [] }) => (
 
 AsideCanais.propTypes = {
   habilidades: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    lastMessage: PropTypes.string,
     fill: PropTypes.string,
-    shape: PropTypes.any
+    shape: PropTypes.any,
+    hasMessage: PropTypes.boolean
   }))
 };
 
