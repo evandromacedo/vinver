@@ -41,7 +41,7 @@ class Chat extends Component {
         ...this.state.mensagens,
         {
           id: shortid.generate(),
-          user: 'benkenobi',
+          user: 'luke.skywalker',
           urlImagem: 'https://static.publicocdn.com/files/starwars/img/luke/02.jpg',
           mensagem: text,
           momento: new Date()
