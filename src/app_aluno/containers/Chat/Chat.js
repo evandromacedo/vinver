@@ -10,6 +10,7 @@ import ChatMensagem from 'app_aluno/components/ChatMensagem/ChatMensagem';
 import Person from 'common/Icon/Person';
 import QuestionAnswer from 'common/Icon/QuestionAnswer';
 import Input from 'common/Input/Input';
+import { Mensagens } from './SampleMessages';
 
 class Chat extends Component {
   render() {
@@ -40,6 +41,7 @@ class Chat extends Component {
           </div>
         </header>
         <div className="chat__body">
+          <Mensagens />
           <ChatMensagem
             urlImagem="https://static.publicocdn.com/files/starwars/img/luke/02.jpg"
             user="luke.skywalker"

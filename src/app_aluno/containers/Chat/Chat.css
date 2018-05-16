@@ -11,12 +11,15 @@
 
 /* Chat Header */
 .chat__header {
+  position: relative;
+  z-index: 1;
+  background-color: var(--grey-9);
   padding: 1.6rem;
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: 56px 1fr auto;
   align-items: center;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-2);
 }
 
 .chat__header__fill {
@@ -37,17 +40,20 @@
 
 /* Chat Body */
 .chat__body {
-  padding: 1.6rem;
+  padding: 17rem 1.6rem 1.6rem 1.6rem;
   overflow: auto;
-  display: inline-block;
+  display: grid;
+  grid-gap: 1.6rem;
   height: 100%;
   position: absolute;
+  bottom: 64px;
 }
 
 /* Chat Footer */
 .chat__footer {
   padding: 1.6rem;
-  box-shadow: 0 -4px 8px -4px rgba(33,37,41,0.12);
+  box-shadow: 0 -4px 8px -4px rgba(33,37,41,0.12), 0 -8px 12px -4px rgba(33,37,41,0.12);
+  background-color: var(--grey-9);
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: 1fr auto;
