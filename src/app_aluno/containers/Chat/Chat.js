@@ -1,6 +1,7 @@
 // React
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import shortid from 'shortid';
 
 // Styles
 import './Chat.css';
@@ -13,6 +14,39 @@ import Input from 'common/Input/Input';
 import { Mensagens } from './SampleMessages';
 
 class Chat extends Component {
+  state = {
+    text: '',
+    mensagens: []
+  };
+
+  updateText = (e) => {
+    this.setState({ text: e.target.value });
+  }
+
+  sendMessage = () => {
+    const { text } = this.state;
+
+    if (text) {
+      const mensagens = [
+        ...this.state.mensagens,
+        {
+          id: shortid.generate(),
+          user: 'benkenobi',
+          urlImagem: 'https://static.publicocdn.com/files/starwars/img/luke/02.jpg',
+          mensagem: text,
+          momento: new Date()
+        }
+      ];
+
+      this.setState({
+        text: '',
+        mensagens
+      });
+
+      this.chatBody.scrollTop = this.chatBody.scrollHeight;
+    }
+  }
+
   render() {
     let { fill, title, description } = this.props;
 
@@ -40,20 +74,30 @@ class Chat extends Component {
             </Link>
           </div>
         </header>
-        <div className="chat__body">
+        <div ref={(node) => this.chatBody = node} className="chat__body">
           <Mensagens />
-          <ChatMensagem
-            urlImagem="https://static.publicocdn.com/files/starwars/img/luke/02.jpg"
-            user="luke.skywalker"
-            mensagem="The training of Jedi was one of the most important traditions in the history of the Order, with Padawans learning the ways of the Force and the Jedi Code from the more experienced Jedi who held the rank of Knight or Master."
-          />
+          {this.state.mensagens.map(mensagem => (
+            <ChatMensagem
+              key={mensagem.id}
+              urlImagem={mensagem.urlImagem}
+              user={mensagem.user}
+              mensagem={mensagem.mensagem}
+            />
+          ))}
         </div>
         <footer className="chat__footer">
           <Input
             light
             placeholder={`Enviar mensagem para #${title}`}
+            value={this.state.text}
+            onChange={this.updateText}
           />
-          <p className="title-3 light-active cursor-pointer">→</p>
+          <p
+            onClick={this.sendMessage}
+            className="title-3 light-active cursor-pointer"
+          >
+            →
+          </p>
         </footer>
       </section>
     );
