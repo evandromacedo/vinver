@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Styles
-import './ShortProfile.css';
+import './AsideProfile.css';
 
-class ShortProfile extends Component {
+class AsideProfile extends Component {
   render() {
     const {
       usuario,
@@ -13,14 +13,14 @@ class ShortProfile extends Component {
     } = this.props;
 
     return (
-      <section className="short-profile">
-        <div className="short-profile__usuario">
+      <section className="aside-profile">
+        <div className="aside-profile__usuario">
           <img
-            className="short-profile__usuario__imagem"
+            className="aside-profile__usuario__imagem"
             src={usuario.imagem}
             alt="Perfil do Usuário"
           />
-          <div className="short-profile__usuario__info">
+          <div className="aside-profile__usuario__info">
             <p className="headline light-primary">
               { usuario.nome }
             </p>
@@ -31,11 +31,11 @@ class ShortProfile extends Component {
         </div>
         {!!dados.length &&
           dados.map((dado, index) => (
-            <div className="short-profile__dados" key={index}>
+            <div className="aside-profile__dados" key={index}>
               <p className="footnote-1 light-primary">
                 { dado.label }
               </p>
-              <p className="short-profile__dados__value headline light-disabled">
+              <p className="aside-profile__dados__value headline light-disabled">
                 { dado.value }
               </p>
             </div>
@@ -46,7 +46,7 @@ class ShortProfile extends Component {
   }
 }
 
-ShortProfile.propTypes = {
+AsideProfile.propTypes = {
   usuario: PropTypes.shape({
     imagem: PropTypes.string,
     nome: PropTypes.string.isRequired,
@@ -58,8 +58,8 @@ ShortProfile.propTypes = {
   }))
 };
 
-ShortProfile.defaultProps = {
+AsideProfile.defaultProps = {
   dados: []
 };
 
-export default ShortProfile;
+export default AsideProfile;

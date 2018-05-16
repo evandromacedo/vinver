@@ -14,6 +14,7 @@ import Chat from 'common/Icon/Chat';
 import Book from 'common/Icon/Book';
 import Dashboard from 'common/Icon/Dashboard';
 import Exit from 'common/Icon/Exit';
+import Stars from 'common/Icon/Stars';
 
 class SideNav extends Component {
   render() {
@@ -51,6 +52,7 @@ class SideNav extends Component {
             <SideNavItem
               className="side-nav-item__aluno"
               title="Mensagens"
+              to="/mensagens"
               icon={<Chat fill="grey-8" />}
               info="4"
             />
@@ -65,8 +67,8 @@ class SideNav extends Component {
           <li>
             <SideNavItem
               className="side-nav-item__aluno"
-              title="Plataforma Vinver"
-              icon={<Dashboard fill="grey-8" />}
+              title="Ranking"
+              icon={<Stars fill="grey-8" />}
             />
           </li>
         </ul>
