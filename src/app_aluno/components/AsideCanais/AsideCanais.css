@@ -1,5 +1,5 @@
-/* Habilidades */
-.aside-habilidades {
+/* Canais */
+.aside-canais {
   padding: 1.6rem;
   background-color: var(--grey-9);
   border-radius: 4px;
@@ -7,20 +7,27 @@
   grid-gap: 1.6rem;
 }
 
-.aside-habilidades__list {
+.aside-canais__list {
   display: grid;
   grid-gap: 1.6rem;
-  grid-template-columns: repeat(auto-fill, 48px);
 }
 
-.aside-habilidades__habilidade {
-  --fill: var(--grey-8);
-  background-color: var(--fill);
-  border-radius: 8px;
-  height: 48px;
-  width: 100%;
+.aside-canais__canal {
   display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: 32px 160px auto;
   align-items: center;
   justify-items: center;
-  overflow: hidden;
+}
+
+.aside-canais__canal__fill {
+  width: 100%;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--fill);
+}
+
+.aside-canais__canal__descricao > p {
+  line-height: 1.6rem;
+  max-width: 16rem;
 }
