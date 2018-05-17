@@ -7,9 +7,10 @@ import './AsideCanais.css';
 
 // Components
 import Comment from 'common/Icon/Comment';
+import ButtonGrey from 'common/Button/ButtonGrey';
 
-const AsideCanais = ({ canais = [] }) => (
-  <div className="aside-canais">
+const AsideCanais = ({ canais = [], buttonBottom }) => (
+  <section className="aside-canais">
     <p className="headline light-primary">Canais</p>
     <div className="aside-canais__list">
       {canais.map((canal, index) => (
@@ -33,7 +34,14 @@ const AsideCanais = ({ canais = [] }) => (
         </div>
       ))}
     </div>
-  </div>
+    {buttonBottom &&
+      <ButtonGrey
+        type="6"
+        title={`${buttonBottom.titulo} →`}
+        onClick={buttonBottom.onClick}
+      />
+    }
+  </section>
 );
 
 AsideCanais.propTypes = {
@@ -43,7 +51,15 @@ AsideCanais.propTypes = {
     fill: PropTypes.string,
     shape: PropTypes.any,
     hasMessage: PropTypes.boolean
-  }))
+  })),
+  buttonBottom: PropTypes.shape({
+    titulo: PropTypes.string.isRequired,
+    onClick: PropTypes.func
+  })
+};
+
+AsideCanais.defaultProps = {
+  buttonBottom: null
 };
 
 export default AsideCanais;

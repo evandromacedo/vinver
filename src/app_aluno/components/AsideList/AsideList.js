@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
 // Styles
 import './AsideList.css';
 
+// Components
+import ButtonGrey from 'common/Button/ButtonGrey';
+
 class AsideList extends Component {
   render() {
-    const { titulo, itens } = this.props;
+    const { titulo, itens, buttonBottom } = this.props;
 
     return (
       <section className="aside-list">
@@ -20,6 +23,13 @@ class AsideList extends Component {
             icon={item.icon}
           />
         ))}
+        {buttonBottom &&
+          <ButtonGrey
+            type="6"
+            title={`${buttonBottom.titulo} →`}
+            onClick={buttonBottom.onClick}
+          />
+        }
       </section>
     );
   }

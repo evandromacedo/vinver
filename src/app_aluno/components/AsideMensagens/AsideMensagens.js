@@ -7,9 +7,10 @@ import './AsideMensagens.css';
 
 // Components
 import Comment from 'common/Icon/Comment';
+import ButtonGrey from 'common/Button/ButtonGrey';
 
-const AsideMensagens = ({ mensagens = [] }) => (
-  <div className="aside-mensagens">
+const AsideMensagens = ({ mensagens = [], buttonBottom }) => (
+  <section className="aside-mensagens">
     <p className="headline light-primary">Mensagens</p>
     <div className="aside-mensagens__list">
       {mensagens.map((mensagem, index) => (
@@ -36,7 +37,14 @@ const AsideMensagens = ({ mensagens = [] }) => (
         </div>
       ))}
     </div>
-  </div>
+    {buttonBottom &&
+      <ButtonGrey
+        type="6"
+        title={`${buttonBottom.titulo} →`}
+        onClick={buttonBottom.onClick}
+      />
+    }
+  </section>
 );
 
 AsideMensagens.propTypes = {
@@ -46,7 +54,15 @@ AsideMensagens.propTypes = {
     fill: PropTypes.string,
     hasMessage: PropTypes.boolean,
     urlImagem: PropTypes.string
-  }))
+  })),
+  buttonBottom: PropTypes.shape({
+    titulo: PropTypes.string.isRequired,
+    onClick: PropTypes.func
+  })
+};
+
+AsideMensagens.defaultProps = {
+  buttonBottom: null
 };
 
 export default AsideMensagens;

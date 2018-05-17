@@ -19,14 +19,14 @@ const ButtonGreyStory = storiesOf('ButtonGrey', module)
   .add('default', () => (
     <ButtonGrey
       title="Normal"
-      type="6"
+      type="7"
       onClick={action('Click')}
     />
   ))
   .add('active', () => (
     <ButtonGrey
       title="Active"
-      type="6"
+      type="7"
       onClick={action('Click')}
       active
     />
@@ -34,7 +34,7 @@ const ButtonGreyStory = storiesOf('ButtonGrey', module)
   .add('disabled', () => (
     <ButtonGrey
       title="Disabled"
-      type="6"
+      type="7"
       onClick={action('Click')}
       disabled
     />

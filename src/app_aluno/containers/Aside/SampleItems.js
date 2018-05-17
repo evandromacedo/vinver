@@ -41,7 +41,7 @@ export const Classes = () => (
       }
     ]}
     buttonBottom={{
-      titulo: 'Todos as Classes'
+      titulo: 'Todas as Classes'
     }}
   />
 );
@@ -138,6 +138,9 @@ export const Habilidades = () => (
         shape: <p className="title-2">⭐️</p> // eslint-disable-line
       }
     ]}
+    buttonBottom={{
+      titulo: 'Todas as Habilidades'
+    }}
   />
 );
 
@@ -195,6 +198,9 @@ export const Canais = () => (
         lastMessage: '@rey · From the remmants of the guilds'
       }
     ]}
+    buttonBottom={{
+      titulo: 'Todos os Canais'
+    }}
   />
 );
 
@@ -231,5 +237,8 @@ export const Mensagens = () => (
         urlImagem: ''
       }
     ]}
+    buttonBottom={{
+      titulo: 'Todas as Mensagens'
+    }}
   />
 );
