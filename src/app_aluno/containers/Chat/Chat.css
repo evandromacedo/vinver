@@ -64,3 +64,22 @@
   right: 0;
   z-index: 1;
 }
+
+/* Transition */
+.new-message-enter {
+  opacity: 0.01;
+}
+
+.new-message-enter.new-message-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.new-message-leave {
+  opacity: 1;
+}
+
+.new-message-leave.new-message-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

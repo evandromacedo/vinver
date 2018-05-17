@@ -7,6 +7,7 @@ import shortid from 'shortid';
 import './Chat.css';
 
 // Components
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ChatMensagem from 'app_aluno/components/ChatMensagem/ChatMensagem';
 import People from 'common/Icon/People';
 import Settings from 'common/Icon/Settings';
@@ -87,6 +88,12 @@ class Chat extends Component {
         </header>
         <div ref={(node) => this.chatBody = node} className="chat__body">
           <Mensagens />
+          <ReactCSSTransitionGroup
+            className="feed"
+            transitionName="new-message"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
           {this.state.mensagens.map(mensagem => (
             <ChatMensagem
               key={mensagem.id}
@@ -95,6 +102,7 @@ class Chat extends Component {
               mensagem={mensagem.mensagem}
             />
           ))}
+          </ReactCSSTransitionGroup>
         </div>
         <footer className="chat__footer">
           <Input
