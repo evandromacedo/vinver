@@ -33,3 +33,158 @@
 .button-light--disabled:hover > .caption-2 {
   color: var(--light-disabled);
 }
+
+/* Button Grey 1 */
+.button-grey-1 {
+  color: var(--dark-secondary);
+  background-color: var(--grey-1);
+}
+
+.button-grey-1:hover,
+.button-grey-1--active {
+  background-color: var(--grey-2);
+}
+
+.button-grey-1--active {
+  color: var(--dark-primary);
+}
+
+.button-grey-1--disabled,
+.button-grey-1--disabled:hover {
+  color: var(--dark-disabled);
+  background-color: var(--grey-1);
+  cursor: not-allowed;
+}
+
+/* Button Grey 2 */
+.button-grey-2 {
+  color: var(--dark-secondary);
+  background-color: var(--grey-4);
+}
+
+.button-grey-2:hover,
+.button-grey-2--active {
+  background-color: var(--grey-5);
+}
+
+.button-grey-2--active {
+  color: var(--dark-primary);
+}
+
+.button-grey-2--disabled,
+.button-grey-2--disabled:hover {
+  color: var(--dark-disabled);
+  background-color: var(--grey-4);
+  cursor: not-allowed;
+}
+
+/* Button Grey 3 */
+.button-grey-3 {
+  color: var(--light-primary);
+  background-color: var(--grey-10);
+}
+
+.button-grey-3:hover,
+.button-grey-3--active {
+  background-color: var(--grey-11);
+}
+
+.button-grey-3--active {
+  color: var(--light-active);
+}
+
+.button-grey-3--disabled,
+.button-grey-3--disabled:hover {
+  color: var(--light-disabled);
+  background-color: var(--grey-10);
+  cursor: not-allowed;
+}
+
+/* Button Grey 4 */
+.button-grey-4 {
+  color: var(--dark-secondary);
+  border: 1px solid var(--grey-4);
+}
+
+.button-grey-4:hover,
+.button-grey-4--active {
+  border-color: var(--grey-5);
+}
+
+.button-grey-4--active {
+  color: var(--dark-primary);
+}
+
+.button-grey-4--disabled,
+.button-grey-4--disabled:hover {
+  color: var(--dark-disabled);
+  border-color: var(--grey-4);
+  cursor: not-allowed;
+}
+
+/* Button Grey 5 */
+.button-grey-5 {
+  color: var(--dark-primary);
+  border: 1px solid var(--grey-5);
+}
+
+.button-grey-5:hover,
+.button-grey-5--active {
+  border-color: var(--grey-6);
+}
+
+.button-grey-5--active {
+  color: var(--dark-active);
+}
+
+.button-grey-5--disabled,
+.button-grey-5--disabled:hover {
+  color: var(--dark-disabled);
+  border-color: var(--grey-5);
+  cursor: not-allowed;
+}
+
+/* Button Grey 6 */
+.button-grey-6 {
+  color: var(--light-primary);
+  border: 1px solid var(--grey-6);
+  background-color: var(--grey-9);
+}
+
+.button-grey-6:hover,
+.button-grey-6--active {
+  border-color: var(--grey-7);
+}
+
+.button-grey-6--active {
+  color: var(--light-active);
+}
+
+.button-grey-6--disabled,
+.button-grey-6--disabled:hover {
+  color: var(--light-disabled);
+  border-color: var(--grey-6);
+  cursor: not-allowed;
+}
+
+/* Button Grey 7 */
+.button-grey-7 {
+  color: var(--dark-primary);
+  border: 1px solid var(--grey-10);
+}
+
+.button-grey-7:hover,
+.button-grey-7--active {
+  border-color: var(--grey-11);
+}
+
+.button-grey-7--active {
+  color: var(--dark-active);
+}
+
+.button-grey-7--disabled,
+.button-grey-7--disabled:hover {
+  color: var(--dark-disabled);
+  border-color: var(--grey-10);
+  cursor: not-allowed;
+}

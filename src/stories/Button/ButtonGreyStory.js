@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 // Components
-import ButtonLight from 'common/Button/ButtonLight';
+import ButtonGrey from 'common/Button/ButtonGrey';
 
 const decorator = story => (
   <div style={{ width: '100px', margin: '20px' }}>
@@ -14,31 +14,30 @@ const decorator = story => (
   </div>
 );
 
-const ButtonLightStory = storiesOf('ButtonLight', module)
+const ButtonGreyStory = storiesOf('ButtonGrey', module)
   .addDecorator(decorator)
   .add('default', () => (
-    <ButtonLight
+    <ButtonGrey
       title="Normal"
-      color="red"
+      type="6"
       onClick={action('Click')}
-      placeholder="Buscar no Vinver por..."
     />
   ))
   .add('active', () => (
-    <ButtonLight
+    <ButtonGrey
       title="Active"
-      color="red"
+      type="6"
       onClick={action('Click')}
       active
     />
   ))
   .add('disabled', () => (
-    <ButtonLight
+    <ButtonGrey
       title="Disabled"
-      color="red"
+      type="6"
       onClick={action('Click')}
       disabled
     />
   ));
 
-export { ButtonLightStory };
+export { ButtonGreyStory };
