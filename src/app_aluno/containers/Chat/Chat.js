@@ -8,8 +8,9 @@ import './Chat.css';
 
 // Components
 import ChatMensagem from 'app_aluno/components/ChatMensagem/ChatMensagem';
-import Person from 'common/Icon/Person';
-import QuestionAnswer from 'common/Icon/QuestionAnswer';
+import People from 'common/Icon/People';
+import Settings from 'common/Icon/Settings';
+import Send from 'common/Icon/Send';
 import Input from 'common/Input/Input';
 import { Mensagens } from './SampleMessages';
 
@@ -77,10 +78,10 @@ class Chat extends Component {
           </div>
           <div className="chat__header__right">
             <Link to="#">
-              <Person fill="grey-6" />
+              <People fill="grey-6" />
             </Link>
             <Link to="#">
-              <QuestionAnswer fill="grey-6" />
+              <Settings fill="grey-6" />
             </Link>
           </div>
         </header>
@@ -107,7 +108,7 @@ class Chat extends Component {
             onClick={this.sendMessage}
             className="title-3 light-active cursor-pointer"
           >
-            →
+            <Send fill="grey-6" />
           </p>
         </footer>
       </section>

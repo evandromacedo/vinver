@@ -13,7 +13,7 @@ import Notifications from 'common/Icon/Notifications';
 import Chat from 'common/Icon/Chat';
 import Book from 'common/Icon/Book';
 import Exit from 'common/Icon/Exit';
-import Stars from 'common/Icon/Stars';
+import Flag from 'common/Icon/Flag';
 
 class SideNav extends Component {
   render() {
@@ -67,7 +67,7 @@ class SideNav extends Component {
             <SideNavItem
               className="side-nav-item__aluno"
               title="Ranking"
-              icon={<Stars fill="grey-8" />}
+              icon={<Flag fill="grey-8" />}
             />
           </li>
         </ul>
