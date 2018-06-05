@@ -9,6 +9,7 @@ import AsideHabilidades from 'app_aluno/components/AsideHabilidades/AsideHabilid
 import AsideProfile from 'app_aluno/components/AsideProfile/AsideProfile';
 import AsideCanais from 'app_aluno/components/AsideCanais/AsideCanais';
 import AsideMensagens from 'app_aluno/components/AsideMensagens/AsideMensagens';
+import AsideParticipantes from 'app_aluno/components/AsideParticipantes/AsideParticipantes';
 
 export const Classes = () => (
   <AsideList
@@ -239,6 +240,47 @@ export const Mensagens = () => (
     ]}
     buttonBottom={{
       titulo: 'Todas as Mensagens'
+    }}
+  />
+);
+
+export const Participantes = () => (
+  <AsideParticipantes
+    participantes={[
+      {
+        user: 'benkenobi',
+        name: 'Agent Retriever',
+        status: 'online',
+        urlImagem: 'https://topicimages.mrowl.com/large/jack_attack/the_force_is_strong/characters/prequeltrilogy/obi_wankenobi__1.jpg'
+      },
+      {
+        user: 'windu.m',
+        name: 'Devoted Defender',
+        status: 'online',
+        urlImagem: 'https://cdn.movieweb.com/img.news/NExUmTtbPVqVBF_1_1.jpg'
+      },
+      {
+        user: 'skywalker',
+        name: 'Mindbender',
+        status: 'ausente',
+        urlImagem: 'https://upload.wikimedia.org/wikipedia/pt/7/74/Anakin-Jedi.jpg'
+      },
+      {
+        user: 'x-wing',
+        name: 'Spymaster',
+        status: 'ausente',
+        urlImagem: 'https://pbs.twimg.com/profile_images/679543350630825984/fRn2iH-l.png'
+      },
+      {
+        fill: 'pink-fill',
+        user: 'rey',
+        name: 'Warden',
+        status: 'ocupado',
+        urlImagem: ''
+      }
+    ]}
+    buttonBottom={{
+      titulo: 'Todos os participantes'
     }}
   />
 );

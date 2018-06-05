@@ -13,7 +13,8 @@ import {
   RedesSociais,
   Habilidades,
   Canais,
-  Mensagens
+  Mensagens,
+  Participantes,
 } from './SampleItems';
 
 class Aside extends Component {
@@ -36,6 +37,7 @@ class Aside extends Component {
           )} />
           <Route path="/mensagens" render={() => (
             <Fragment>
+              <Participantes />
               <Canais />
               <Mensagens />
             </Fragment>

@@ -48,7 +48,7 @@ const AsideMensagens = ({ mensagens = [], buttonBottom }) => (
 );
 
 AsideMensagens.propTypes = {
-  habilidades: PropTypes.arrayOf(PropTypes.shape({
+  mensagens: PropTypes.arrayOf(PropTypes.shape({
     user: PropTypes.string,
     lastMessage: PropTypes.string,
     fill: PropTypes.string,

@@ -45,7 +45,7 @@ const AsideCanais = ({ canais = [], buttonBottom }) => (
 );
 
 AsideCanais.propTypes = {
-  habilidades: PropTypes.arrayOf(PropTypes.shape({
+  canais: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     lastMessage: PropTypes.string,
     fill: PropTypes.string,
