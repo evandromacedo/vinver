@@ -25,13 +25,13 @@ if (
   const WhichApp = () => (
     <div style={styles}>
       <a href="/vinver/aluno">
-        <h1 className="title-3 dark-primary">
-          Módulo do Aluno →
+        <h1 className="title-3 dark-primary"> {/* // eslint-disable-line */}
+          🎓 Módulo do Aluno →
         </h1>
       </a>
       <a href="/vinver/professor">
-        <h1 className="title-3 dark-primary">
-          Módulo do Professor →
+        <h1 className="title-3 dark-primary"> {/* // eslint-disable-line */}
+          👨🏻‍🏫 Módulo do Professor →
         </h1>
       </a>
     </div>
