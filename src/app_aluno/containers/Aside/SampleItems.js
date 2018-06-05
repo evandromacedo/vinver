@@ -5,6 +5,11 @@ import React from 'react';
 import AsideList from 'app_aluno/components/AsideList/AsideList';
 import School from 'common/Icon/School';
 import Stars from 'common/Icon/Stars';
+import Tumblr from 'common/Icon/Tumblr';
+import Twitter from 'common/Icon/Twitter';
+import Facebook from 'common/Icon/Facebook';
+import Instagram from 'common/Icon/Instagram';
+import Spotify from 'common/Icon/Spotify';
 import AsideHabilidades from 'app_aluno/components/AsideHabilidades/AsideHabilidades';
 import AsideProfile from 'app_aluno/components/AsideProfile/AsideProfile';
 import AsideCanais from 'app_aluno/components/AsideCanais/AsideCanais';
@@ -77,27 +82,27 @@ export const RedesSociais = () => (
       {
         materia: 'Tumblr',
         turma: '@luke.skywalker',
-        icon: <p className="title-2 light-primary">ⓣ</p> // eslint-disable-line
+        icon: <Tumblr fill="grey-1" />
       },
       {
         materia: 'Twitter',
         turma: '@luke.skywalker',
-        icon: <p className="title-2 light-primary">Ⓣ</p> // eslint-disable-line
+        icon: <Twitter fill="grey-1" />
       },
       {
         materia: 'Instagram',
         turma: '@luke.skywalker',
-        icon: <p className="title-2 light-primary">ⓘ</p> // eslint-disable-line
+        icon: <Instagram fill="grey-1" />
       },
       {
         materia: 'Facebook',
         turma: '@luke.skywalker',
-        icon: <p className="title-2 light-primary">ⓕ</p> // eslint-disable-line
+        icon: <Facebook fill="grey-1" />
       },
       {
         materia: 'Spotify',
         turma: '@luke.skywalker',
-        icon: <p className="title-2 light-primary">ⓢ</p> // eslint-disable-line
+        icon: <Spotify fill="grey-1" />
       }
     ]}
   />
