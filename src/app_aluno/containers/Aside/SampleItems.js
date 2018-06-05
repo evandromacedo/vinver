@@ -82,27 +82,27 @@ export const RedesSociais = () => (
       {
         materia: 'Tumblr',
         turma: '@luke.skywalker',
-        icon: <Tumblr fill="grey-1" />
+        icon: <span className="cursor-pointer"><Tumblr fill="grey-6" /></span>
       },
       {
         materia: 'Twitter',
         turma: '@luke.skywalker',
-        icon: <Twitter fill="grey-1" />
+        icon: <span className="cursor-pointer"><Twitter fill="grey-6" /></span>
       },
       {
         materia: 'Instagram',
         turma: '@luke.skywalker',
-        icon: <Instagram fill="grey-1" />
+        icon: <span className="cursor-pointer"><Instagram fill="grey-6" /></span>
       },
       {
         materia: 'Facebook',
         turma: '@luke.skywalker',
-        icon: <Facebook fill="grey-1" />
+        icon: <span className="cursor-pointer"><Facebook fill="grey-6" /></span>
       },
       {
         materia: 'Spotify',
         turma: '@luke.skywalker',
-        icon: <Spotify fill="grey-1" />
+        icon: <span className="cursor-pointer"><Spotify fill="grey-6" /></span>
       }
     ]}
   />
