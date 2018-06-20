@@ -1,6 +1,6 @@
 // React
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component, Fragment } from 'react';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
 // Styles
 import './Aside.css';
@@ -20,31 +20,55 @@ class Aside extends Component {
       dados: [
         {
           label: 'Total de classes',
-          value: '8',
+          value: '8'
         },
         {
           label: 'Número de alunos',
-          value: '320',
+          value: '320'
         },
         {
           label: 'Projetos disponíveis',
-          value: '20',
+          value: '20'
         }
       ]
     };
   }
 
   render() {
-    const { page } = this.props.match.params;
-
     return (
       <aside className="aside">
-        {page !== 'perfil' &&
-          <ShortProfile {...this.getUserInfo()} />
-        }
-        <Classes />
-        <Projetos />
-        <Destaque />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Fragment>
+                <ShortProfile {...this.getUserInfo()} />
+                <Classes />
+                <Projetos />
+                <Destaque />
+              </Fragment>
+            )}
+          />
+          <Route
+            path="/perfil"
+            render={() => (
+              <Fragment>
+                <Classes />
+                <Projetos />
+                <Destaque />
+              </Fragment>
+            )}
+          />
+          <Route
+            path="/metas"
+            render={() => (
+              <Fragment>
+                <p>:D</p>
+              </Fragment>
+            )}
+          />
+        </Switch>
       </aside>
     );
   }

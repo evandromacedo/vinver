@@ -17,6 +17,10 @@
     "redux-thunk": "^2.2.0",
     "shortid": "^2.2.8"
   },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

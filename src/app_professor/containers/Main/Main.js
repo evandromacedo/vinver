@@ -1,6 +1,6 @@
 // React
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 // Styles
 import './Main.css';
@@ -24,9 +24,12 @@ class Main extends Component {
 
     return (
       <main className="main">
-        <Route path="/perfil" render={() => <Profile { ...profileProps } />} />
+        <Route path="/perfil" render={() => <Profile {...profileProps} />} />
         <div className="feed-area">
-          <Route path="/:type?" component={Feed} />
+          <Switch>
+            <Route exact path="/" component={Feed} />
+            <Route path="/metas" render={() => <p>Metas</p>} />
+          </Switch>
         </div>
         <div className="aside-area">
           <Route path="/:page?" component={Aside} />

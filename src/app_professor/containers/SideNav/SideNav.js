@@ -23,12 +23,7 @@ class SideNav extends Component {
       <aside className="side-nav">
         <ul className="side-nav__nav-list">
           <li>
-            <SideNavItem
-              title="Home"
-              exact
-              to="/"
-              icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />}
-            />
+            <SideNavItem title="Home" exact to="/" icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />} />
           </li>
           <li>
             <SideNavItem
@@ -44,7 +39,7 @@ class SideNav extends Component {
             <SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" />
           </li>
           <li>
-            <SideNavItem title="Metas" icon={<Book fill="grey-7" />} />
+            <SideNavItem title="Metas" to="/metas" icon={<Book fill={url === '/metas' ? 'blue-fill' : 'grey-7'} />} />
           </li>
           <li>
             <SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} />
