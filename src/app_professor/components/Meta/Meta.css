@@ -1,0 +1,23 @@
+/* Meta */
+.meta {
+  border-radius: 4px;
+  background-color: var(--cor-fill);
+}
+
+.meta__header {
+  padding: 0.8rem 1.6rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: var(--cor-shadow);
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: auto 1fr auto;
+}
+
+.meta__body {
+  padding: 1.6rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: calc(100% - 28px);
+}

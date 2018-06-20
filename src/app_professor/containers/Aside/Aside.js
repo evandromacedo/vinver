@@ -45,8 +45,8 @@ class Aside extends Component {
               <Fragment>
                 <ShortProfile {...this.getUserInfo()} />
                 <Classes />
-                <Projetos />
                 <Destaque />
+                <Projetos />
               </Fragment>
             )}
           />
@@ -55,16 +55,20 @@ class Aside extends Component {
             render={() => (
               <Fragment>
                 <Classes />
-                <Projetos />
                 <Destaque />
+                <Projetos />
               </Fragment>
             )}
           />
           <Route
+            exact
             path="/metas"
             render={() => (
               <Fragment>
-                <p>:D</p>
+                <ShortProfile {...this.getUserInfo()} />
+                <Classes />
+                <Destaque />
+                <Projetos />
               </Fragment>
             )}
           />

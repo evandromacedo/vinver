@@ -7,6 +7,7 @@ import './Main.css';
 
 // Components
 import Profile from 'app_professor/components/Profile/Profile';
+import Metas from 'app_professor/containers/Metas/Metas';
 import Feed from 'app_professor/containers/Feed/Feed';
 import Aside from 'app_professor/containers/Aside/Aside';
 
@@ -28,7 +29,7 @@ class Main extends Component {
         <div className="feed-area">
           <Switch>
             <Route exact path="/" component={Feed} />
-            <Route path="/metas" render={() => <p>Metas</p>} />
+            <Route path="/metas" component={Metas} />
           </Switch>
         </div>
         <div className="aside-area">
