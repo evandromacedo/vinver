@@ -10,7 +10,7 @@ html {
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "side-nav main main main";
+  grid-template-areas: 'side-nav main main main';
 }
 
 .main-area {
@@ -23,7 +23,7 @@ html {
 
 @media (max-width: 768px) {
   .app-container {
-    grid-template-areas: "main main main main";
+    grid-template-areas: 'main main main main';
     padding: 0 1.6rem 1.6rem 1.6rem;
   }
 
@@ -33,6 +33,10 @@ html {
 }
 
 /* Helpers */
+.text-center {
+  text-align: center;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

@@ -1,6 +1,7 @@
 // React
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 // Styles
 import './Meta.css';
@@ -14,10 +15,12 @@ class Meta extends Component {
       '--cor-shadow': `var(--${cor}-shadow)`
     };
 
+    const isSmall = type === 'small';
+
     return (
-      <div className={`meta meta--${type}`} style={style}>
+      <Link to={`/metas/${numero}`} className="meta" style={style}>
         <div className="meta__header">
-          {type === 'small' ? (
+          {isSmall ? (
             <Fragment>
               <p className="caption-2 light-active">Meta #{numero}</p>
               <p className="caption-3 light-primary">{periodo}</p>
@@ -36,14 +39,14 @@ class Meta extends Component {
           )}
         </div>
         <div className="meta__body">
-          <p className="headline light-active">{descricao}</p>
+          <p className={`headline light-active ${isSmall ? 'text-center' : ''}`}>{descricao}</p>
         </div>
-      </div>
+      </Link>
     );
   }
 }
 
-Meta.PropTypes = {
+Meta.propTypes = {
   type: PropTypes.oneOf(['small', 'large']),
   numero: PropTypes.string,
   periodo: PropTypes.string,
