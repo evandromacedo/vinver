@@ -29,6 +29,13 @@ class Main extends Component {
         <div className="feed-area">
           <Switch>
             <Route exact path="/" component={Feed} />
+            <Route
+              path="/perfil"
+              render={({ match }) => {
+                match.params.type = 'perfil';
+                return <Feed match={match} />;
+              }}
+            />
             <Route path="/metas" component={Metas} />
           </Switch>
         </div>

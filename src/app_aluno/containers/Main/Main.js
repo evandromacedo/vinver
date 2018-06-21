@@ -25,7 +25,7 @@ class Main extends Component {
 
     return (
       <main className="main">
-        <Route path="/perfil" render={() => <Profile { ...profileProps } />} />
+        <Route path="/perfil" render={() => <Profile {...profileProps} />} />
         <div className="feed-area">
           <Switch>
             <Route exact path="/" component={Feed} />

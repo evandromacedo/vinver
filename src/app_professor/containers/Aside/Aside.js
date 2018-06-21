@@ -7,7 +7,7 @@ import './Aside.css';
 
 // Components
 import ShortProfile from 'app_professor/components/ShortProfile/ShortProfile';
-import { Classes, Projetos, Destaque } from './SampleItems';
+import { Classes, Projetos, Destaque, Descricao, Regras } from './SampleItems';
 
 class Aside extends Component {
   getUserInfo() {
@@ -69,6 +69,15 @@ class Aside extends Component {
                 <Classes />
                 <Destaque />
                 <Projetos />
+              </Fragment>
+            )}
+          />
+          <Route
+            path="/metas/:id"
+            render={({ match }) => (
+              <Fragment>
+                <Descricao id={match.params.id} />
+                <Regras id={match.params.id} />
               </Fragment>
             )}
           />

@@ -1,8 +1,10 @@
 // React
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Components
 import AsideList from 'app_professor/components/AsideList/AsideList';
+import AsideMeta from 'app_professor/components/AsideMeta/AsideMeta';
+import { metasSample } from 'app_professor/containers/Metas/MetasSample';
 import School from 'common/Icon/School';
 import Stars from 'common/Icon/Stars';
 import Assignment from 'common/Icon/Assignment';
@@ -98,3 +100,28 @@ export const Projetos = () => (
     ]}
   />
 );
+
+export const Descricao = ({ id }) => {
+  const meta = metasSample.find(meta => meta.numero === id);
+
+  return (
+    <AsideMeta title="Descrição">
+      <p className="dark-primary footnote-2">{meta.descricaoLonga}</p>
+    </AsideMeta>
+  );
+};
+
+export const Regras = ({ id }) => {
+  const meta = metasSample.find(meta => meta.numero === id);
+
+  return (
+    <AsideMeta title="Regras">
+      {meta.regras.map((regra, index) => (
+        <Fragment key={index}>
+          <p className="dark-primary footnote-1">{regra.titulo}</p>
+          <p className="dark-primary footnote-2">{regra.descricao}</p>
+        </Fragment>
+      ))}
+    </AsideMeta>
+  );
+};

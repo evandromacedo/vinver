@@ -90,19 +90,20 @@ const alunosList = [
     linkTo: '#'
   },
   {
-    image: '',
+    image:
+      'https://topicimages.mrowl.com/large/jack_attack/the_force_is_strong/characters/prequeltrilogy/obi_wankenobi__1.jpg',
     linkTo: '#'
   },
   {
-    image: '',
+    image: 'https://cdn.movieweb.com/img.news/NExUmTtbPVqVBF_1_1.jpg',
     linkTo: '#'
   },
   {
-    image: '',
+    image: 'https://upload.wikimedia.org/wikipedia/pt/7/74/Anakin-Jedi.jpg',
     linkTo: '#'
   },
   {
-    image: '',
+    image: 'https://pbs.twimg.com/profile_images/679543350630825984/fRn2iH-l.png',
     linkTo: '#'
   },
   {

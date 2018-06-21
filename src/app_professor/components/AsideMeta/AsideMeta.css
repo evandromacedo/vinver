@@ -1,0 +1,16 @@
+/* Aside Meta */
+.aside-meta {
+  padding: 1.6rem;
+  background-color: var(--grey-1);
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 1.6rem;
+}
+
+/* Content */
+.aside-meta__content {
+  font-family: 'Open Sans';
+  line-height: 1.6rem;
+  display: grid;
+  grid-gap: 0.8rem;
+}
