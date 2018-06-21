@@ -7,6 +7,7 @@ import './Metas.css';
 
 // Components
 import Meta from 'app_professor/components/Meta/Meta';
+import Feed from 'app_professor/containers/Feed/Feed';
 import { metasSample } from './MetasSample';
 
 class MetasDetail extends Component {
@@ -24,6 +25,7 @@ class MetasDetail extends Component {
         <Meta type="large" {...this.meta} />
         <MetasInfo linkTo="#" nameInfo="Classes" infos={classesList} />
         <MetasInfo linkTo="#" nameInfo="Alunos" infos={alunosList} />
+        <Feed />
       </div>
     );
   }
