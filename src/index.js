@@ -25,12 +25,16 @@ if (
   const WhichApp = () => (
     <div style={styles}>
       <a href="/vinver/aluno">
-        <h1 className="title-3 dark-primary"> {/* // eslint-disable-line */}
+        <h1 className="title-3 dark-primary">
+          {' '}
+          {/* // eslint-disable-line */}
           🎓 Módulo do Aluno →
         </h1>
       </a>
       <a href="/vinver/professor">
-        <h1 className="title-3 dark-primary"> {/* // eslint-disable-line */}
+        <h1 className="title-3 dark-primary">
+          {' '}
+          {/* // eslint-disable-line */}
           👨🏻‍🏫 Módulo do Professor →
         </h1>
       </a>
@@ -41,9 +45,13 @@ if (
 }
 // Se tiver em '/aluno/' ou '/professor/'
 else {
-  const app = window.location.href.includes('aluno') ? 'aluno' : 'professor';
+  let app;
 
-  import(`./app_${app}/containers/App/App`).then((AppImport) => {
+  if (window.location.href.includes('aluno')) app = 'aluno';
+  else if (window.location.href.includes('professor')) app = 'professor';
+  else app = 'admin';
+
+  import(`./app_${app}/containers/App/App`).then(AppImport => {
     const App = AppImport.default;
 
     const Routes = () => (
