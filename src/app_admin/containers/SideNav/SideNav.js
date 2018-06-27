@@ -10,14 +10,11 @@ import SideNavItem from 'common/SideNavItem/SideNavItem';
 import Home from 'common/Icon/Home';
 import People from 'common/Icon/People';
 import Person from 'common/Icon/Person';
-import Chat from 'common/Icon/Chat';
+import School from 'common/Icon/School';
 import Book from 'common/Icon/Book';
 import Dashboard from 'common/Icon/Dashboard';
 import Exit from 'common/Icon/Exit';
 
-// TODO: ajeitar esse sidenav e lógica do 'includes' no index.js
-// pois está bugando quando atualiza a página.
-// Terminar de modificar os ícones do Nav.
 class SideNav extends Component {
   render() {
     const { url } = this.props.match;
@@ -43,10 +40,10 @@ class SideNav extends Component {
             />
           </li>
           <li>
-            <SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" />
+            <SideNavItem title="Turmas" icon={<Book fill="grey-7" />} />
           </li>
           <li>
-            <SideNavItem title="Metas" to="/metas" icon={<Book fill={url === '/metas' ? 'cyan-fill' : 'grey-7'} />} />
+            <SideNavItem title="Classes" icon={<School fill="grey-7" />} />
           </li>
           <li>
             <SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} />

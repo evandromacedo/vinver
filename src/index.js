@@ -24,16 +24,20 @@ if (
 
   const WhichApp = () => (
     <div style={styles}>
+      <a href="/vinver/admin">
+        <h1 className="title-3 dark-primary">
+          {/* // eslint-disable-line */}
+          📊 Módulo do Administrador →
+        </h1>
+      </a>
       <a href="/vinver/aluno">
         <h1 className="title-3 dark-primary">
-          {' '}
           {/* // eslint-disable-line */}
           🎓 Módulo do Aluno →
         </h1>
       </a>
       <a href="/vinver/professor">
         <h1 className="title-3 dark-primary">
-          {' '}
           {/* // eslint-disable-line */}
           👨🏻‍🏫 Módulo do Professor →
         </h1>
@@ -43,7 +47,7 @@ if (
 
   ReactDOM.render(<WhichApp />, document.getElementById('root'));
 }
-// Se tiver em '/aluno/' ou '/professor/'
+// Se tiver em '/admin/', '/aluno/' ou '/professor/'
 else {
   let app;
 
