@@ -1,0 +1,24 @@
+/* Main */
+.main {
+  display: grid;
+  grid-gap: 1.6rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.full-area {
+  grid-column: 1 / -1;
+}
+
+.feed-area {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .feed-area {
+    grid-column: 1 / -1;
+  }
+
+  .aside-area {
+    display: none;
+  }
+}

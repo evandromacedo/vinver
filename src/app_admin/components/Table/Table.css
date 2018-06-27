@@ -1,0 +1,36 @@
+/* Table */
+.table {
+  width: 100%;
+  background-color: var(--grey-1);
+  box-shadow: var(--shadow-1);
+  border-radius: 0.4rem;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  color: var(--dark-secondary);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 1.6rem;
+  white-space: nowrap;
+}
+
+.table > thead {
+  color: var(--dark-primary);
+  background-color: var(--light-2);
+}
+
+.table > thead > tr > th {
+  border-bottom: 1px solid var(--grey-5);
+}
+
+.table > tbody > tr:hover:not(:first-child) > td {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--grey-5);
+}
+
+.table > tbody > tr:hover:not(:last-child) > td {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--grey-5);
+}

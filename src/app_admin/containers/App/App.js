@@ -15,7 +15,7 @@ import './App.css';
 // Containers
 import Header from 'app_admin/containers/Header/Header';
 import SideNav from 'app_admin/containers/SideNav/SideNav';
-// import Main from 'app_aluno/containers/Main/Main';
+import Main from 'app_admin/containers/Main/Main';
 
 moment.locale('pt-BR');
 
@@ -30,8 +30,7 @@ class App extends Component {
               <Route path="/:active?" component={SideNav} />
             </div>
             <div className="main-area">
-              :D
-              {/* <Main /> */}
+              <Main />
             </div>
           </div>
         </Fragment>

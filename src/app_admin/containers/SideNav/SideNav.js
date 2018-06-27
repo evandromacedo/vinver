@@ -23,7 +23,9 @@ class SideNav extends Component {
       <aside className="side-nav">
         <ul className="side-nav__nav-list">
           <li>
-            <SideNavItem title="Home" exact to="/" icon={<Home fill={url === '/' ? 'cyan-fill' : 'grey-7'} />} />
+            {/* Enquanto não houver conteúdo no Home */}
+            {/* <SideNavItem title="Home" exact to="/" icon={<Home fill={url === '/' ? 'cyan-fill' : 'grey-7'} />} /> */}
+            <SideNavItem title="Home" icon={<Home fill="grey-7" />} />
           </li>
           <li>
             <SideNavItem
@@ -33,11 +35,13 @@ class SideNav extends Component {
             />
           </li>
           <li>
-            <SideNavItem
+            {/* Enquanto não houver conteúdo dos Professores */}
+            {/* <SideNavItem
               title="Professores"
               to="/professores"
               icon={<Person fill={url === '/professores' ? 'cyan-fill' : 'grey-7'} />}
-            />
+            /> */}
+            <SideNavItem title="Professores" icon={<Person fill="grey-7" />} />
           </li>
           <li>
             <SideNavItem title="Turmas" icon={<Book fill="grey-7" />} />
