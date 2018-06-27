@@ -47,8 +47,8 @@ if (
 else {
   let app;
 
-  if (window.location.href.includes('aluno')) app = 'aluno';
-  else if (window.location.href.includes('professor')) app = 'professor';
+  if (window.location.href.includes('/vinver/aluno')) app = 'aluno';
+  else if (window.location.href.includes('/vinver/professor')) app = 'professor';
   else app = 'admin';
 
   import(`./app_${app}/containers/App/App`).then(AppImport => {
