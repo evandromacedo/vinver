@@ -5,8 +5,10 @@ import React, { Component } from 'react';
 import './Table.css';
 
 // Components
+import onClickOutside from 'react-onclickoutside';
 import ChevronLeft from 'common/Icon/ChevronLeft';
 import ChevronRight from 'common/Icon/ChevronRight';
+import Favorite from 'common/Icon/Favorite';
 
 class TableAlunos extends Component {
   constructor(props) {
@@ -87,11 +89,7 @@ class TableAlunos extends Component {
               <td>{aluno.column5}</td>
               <td>{aluno.column6}</td>
               <td>
-                <div className="table__options">
-                  <span />
-                  <span />
-                  <span />
-                </div>
+                <TableOptions />
               </td>
             </tr>
           ))}
@@ -123,3 +121,46 @@ class TableAlunos extends Component {
 }
 
 export default TableAlunos;
+
+const TableOptions = onClickOutside(
+  class TableOptions extends Component {
+    state = {
+      showOptions: false
+    };
+
+    toggleOptions = () => {
+      this.setState({ showOptions: !this.state.showOptions });
+    };
+
+    handleClickOutside = () => {
+      this.setState({ showOptions: false });
+    };
+
+    render() {
+      const { showOptions } = this.state;
+
+      // Esperando novos ícones para trocar por <Favorite />
+      return (
+        <div className="table__options">
+          {showOptions && (
+            <div className="table__options__list">
+              <div className="table__options__list__item">
+                <Favorite fill="grey-7" />
+                <p className="footnote-1 dark-secondary">Editar entrada</p>
+              </div>
+              <div className="table__options__list__item">
+                <Favorite fill="grey-7" />
+                <p className="footnote-1 dark-secondary">Excluir</p>
+              </div>
+            </div>
+          )}
+          <div onClick={this.toggleOptions} className="table__options__ellipsis">
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+      );
+    }
+  }
+);
