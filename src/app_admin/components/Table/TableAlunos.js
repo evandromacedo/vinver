@@ -86,7 +86,13 @@ class TableAlunos extends Component {
               <td>{aluno.column4}</td>
               <td>{aluno.column5}</td>
               <td>{aluno.column6}</td>
-              <td>...</td>
+              <td>
+                <div className="table__options">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>

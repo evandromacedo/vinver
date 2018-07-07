@@ -48,3 +48,20 @@
   grid-template-columns: 1fr 2.4rem 2.4rem;
   align-items: center;
 }
+
+.table__options {
+  cursor: pointer;
+  text-align: center !important;
+}
+
+.table__options > span {
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: var(--grey-5);
+}
+
+.table__options > span:not(:last-child) {
+  margin-right: 2px;
+}
