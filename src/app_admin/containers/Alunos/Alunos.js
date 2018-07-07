@@ -6,12 +6,13 @@ import './Alunos.css';
 
 // Components
 import TableAlunos from 'app_admin/components/Table/TableAlunos';
+import { alunosSample } from './SampleItens';
 
 class Alunos extends Component {
   render() {
     return (
       <div className="full-area">
-        <TableAlunos />
+        <TableAlunos alunos={alunosSample} />
       </div>
     );
   }
