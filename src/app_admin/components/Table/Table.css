@@ -38,10 +38,13 @@
 .table > tfoot > tr > td {
   text-align: right;
   border-top: 1px solid var(--grey-5);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .table__footer {
   display: grid;
   grid-gap: 2.4rem;
   grid-template-columns: 1fr 2.4rem 2.4rem;
+  align-items: center;
 }

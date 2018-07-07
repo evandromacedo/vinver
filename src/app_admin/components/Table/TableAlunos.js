@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 // Styles
 import './Table.css';
 
+// Components
+import ChevronLeft from 'common/Icon/ChevronLeft';
+import ChevronRight from 'common/Icon/ChevronRight';
+
 class TableAlunos extends Component {
   constructor(props) {
     super(props);
@@ -90,12 +94,18 @@ class TableAlunos extends Component {
           <tr>
             <td colSpan="7">
               <div className="table__footer">
-                <p className="footnote-1 dark-primary">1-10 de 500</p>
                 <p className="footnote-1 dark-primary">
-                  <span onClick={() => this.filterAlunos('previous')}>{'<'}</span>
+                  {this.state.alunosIndex + 1}-{this.state.alunosIndex + 10} de {this.state.alunosList.length}
                 </p>
                 <p className="footnote-1 dark-primary">
-                  <span onClick={() => this.filterAlunos('next')}>{'>'}</span>
+                  <span className="cursor-pointer" onClick={() => this.filterAlunos('previous')}>
+                    <ChevronLeft fill="grey-5" />
+                  </span>
+                </p>
+                <p className="footnote-1 dark-primary">
+                  <span className="cursor-pointer" onClick={() => this.filterAlunos('next')}>
+                    <ChevronRight fill="grey-5" />
+                  </span>
                 </p>
               </div>
             </td>
