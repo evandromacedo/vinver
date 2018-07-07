@@ -12,7 +12,9 @@ class Alunos extends Component {
   render() {
     return (
       <div className="full-area">
-        <TableAlunos alunos={alunosSample} />
+        <div className="table-alunos-wrapper">
+          <TableAlunos alunos={alunosSample} />
+        </div>
       </div>
     );
   }
