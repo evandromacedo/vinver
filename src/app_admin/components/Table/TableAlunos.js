@@ -8,7 +8,8 @@ import './Table.css';
 import onClickOutside from 'react-onclickoutside';
 import ChevronLeft from 'common/Icon/ChevronLeft';
 import ChevronRight from 'common/Icon/ChevronRight';
-import Favorite from 'common/Icon/Favorite';
+import Create from 'common/Icon/Create';
+import Delete from 'common/Icon/Delete';
 
 class TableAlunos extends Component {
   constructor(props) {
@@ -139,17 +140,16 @@ const TableOptions = onClickOutside(
     render() {
       const { showOptions } = this.state;
 
-      // Esperando novos ícones para trocar por <Favorite />
       return (
         <div className="table__options">
           {showOptions && (
             <div className="table__options__list">
               <div className="table__options__list__item">
-                <Favorite fill="grey-7" />
+                <Create fill="grey-7" />
                 <p className="footnote-1 dark-secondary">Editar entrada</p>
               </div>
               <div className="table__options__list__item">
-                <Favorite fill="grey-7" />
+                <Delete fill="grey-7" />
                 <p className="footnote-1 dark-secondary">Excluir</p>
               </div>
             </div>
