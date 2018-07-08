@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import './Table.css';
 
 // Components
+import { Link } from 'react-router-dom';
 import onClickOutside from 'react-onclickoutside';
 import ChevronLeft from 'common/Icon/ChevronLeft';
 import ChevronRight from 'common/Icon/ChevronRight';
@@ -84,14 +85,14 @@ class TableAlunos extends Component {
           <tbody>
             {this.state.alunosVisiveisList.map((aluno, index) => (
               <tr key={index}>
-                <td>{aluno.id}</td>
+                <td>#{aluno.id}</td>
                 <td>{aluno.nome}</td>
                 <td>{aluno.column3}</td>
                 <td>{aluno.column4}</td>
                 <td>{aluno.column5}</td>
                 <td>{aluno.column6}</td>
                 <td>
-                  <TableOptions />
+                  <TableOptions id={aluno.id} />
                 </td>
               </tr>
             ))}
@@ -141,15 +142,16 @@ const TableOptions = onClickOutside(
 
     render() {
       const { showOptions } = this.state;
+      const { id } = this.props;
 
       return (
         <div className="table__options">
           {showOptions && (
             <div className="table__options__list">
-              <div className="table__options__list__item">
+              <Link to={`/alunos/${id}`} className="table__options__list__item">
                 <Create fill="grey-7" />
                 <p className="footnote-1 dark-secondary">Editar entrada</p>
-              </div>
+              </Link>
               <div className="table__options__list__item">
                 <Delete fill="grey-7" />
                 <p className="footnote-1 dark-secondary">Excluir</p>

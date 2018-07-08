@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Styles
 import './Input.css';
 
-class InputLabel extends Component {
+class SelectLabel extends Component {
   render() {
     const { label, options, ...props } = this.props;
     let className = 'input-label__label caption-2 ';
@@ -13,20 +13,20 @@ class InputLabel extends Component {
 
     return (
       <label className="input-label">
-        <select className="input">
+        <select className="input" {...props}>
           {options.map((options, index) => (
-            <option value={options.value}>{options.label}</option>
+            <option key={index} value={options.value}>
+              {options.label}
+            </option>
           ))}
         </select>
-        <p className={className}>
-          { label }
-        </p>
+        <p className={className}>{label}</p>
       </label>
     );
   }
 }
 
-InputLabel.propTypes = {
+SelectLabel.propTypes = {
   label: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
@@ -36,4 +36,4 @@ InputLabel.propTypes = {
   )
 };
 
-export default InputLabel;
+export default SelectLabel;

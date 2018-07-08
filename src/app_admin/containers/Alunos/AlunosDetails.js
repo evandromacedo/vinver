@@ -6,13 +6,30 @@ import './Alunos.css';
 
 // Components
 import FormAluno from 'app_admin/components/FormAluno/FormAluno';
-// import { alunosSample } from './SampleItens';
 
 class AlunosDetails extends Component {
   render() {
-    const idAluno = this.props.match.params.id;
+    const { id } = this.props.match.params;
 
-    return <div className="full-area">{idAluno ? <FormAluno /> : <p>:D</p>}</div>;
+    // OBS: isso é apenas um mock da edição do aluno
+    if (id) {
+      return (
+        <FormAluno
+          id={'0000119875'}
+          nome={'William Jacobs'}
+          usuario={'will.jacobs'}
+          email={'will.jacobs@vinver.com'}
+          celular={'(11) 98888-7777'}
+          nascimento={'2001-11-01'}
+          sexo={'masculino'}
+          serie={'2'}
+          turma={'b'}
+          urlImagem={'https://static.publicocdn.com/files/starwars/img/luke/02.jpg'}
+        />
+      );
+    }
+
+    return <FormAluno />;
   }
 }
 
