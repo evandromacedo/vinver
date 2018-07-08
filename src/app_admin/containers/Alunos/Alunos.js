@@ -1,5 +1,6 @@
 // React
 import React, { Component } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 // Styles
 import './Alunos.css';
@@ -12,9 +13,10 @@ class Alunos extends Component {
   render() {
     return (
       <div className="full-area">
-        <div className="table-alunos-wrapper">
-          <TableAlunos alunos={alunosSample} />
-        </div>
+        <Switch>
+          <Route exact path="/alunos" render={() => <TableAlunos alunos={alunosSample} />} />
+          <Route path="/alunos/cadastrar" component={() => null} />
+        </Switch>
       </div>
     );
   }
