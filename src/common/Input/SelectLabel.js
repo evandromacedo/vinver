@@ -5,18 +5,19 @@ import PropTypes from 'prop-types';
 // Styles
 import './Input.css';
 
-// Components
-import Input from './Input';
-
 class InputLabel extends Component {
   render() {
-    const { label, ...props } = this.props;
+    const { label, options, ...props } = this.props;
     let className = 'input-label__label caption-2 ';
     className += props.disabled ? 'dark-disabled' : 'dark-secondary';
 
     return (
       <label className="input-label">
-        <Input {...props} />
+        <select className="input">
+          {options.map((options, index) => (
+            <option value={options.value}>{options.label}</option>
+          ))}
+        </select>
         <p className={className}>
           { label }
         </p>
@@ -26,7 +27,13 @@ class InputLabel extends Component {
 }
 
 InputLabel.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string
+    })
+  )
 };
 
 export default InputLabel;

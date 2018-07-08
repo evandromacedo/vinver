@@ -1,11 +1,11 @@
 // React
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 
 // Styles
 import './Header.css';
 
 // Components
+import { Link } from 'react-router-dom';
 import InputSearch from 'common/Input/InputSearch';
 import IconAluno from 'common/Icon/People';
 import Logo from 'common/Icon/Logo';
@@ -24,12 +24,12 @@ class Header extends Component {
             <InputSearch placeholder="Buscar no Vinver por..." />
           </div>
           <div className="header-right">
-            <a className="header-right__meta footnote-1 dark-secondary" href="#/">
+            <Link to="/alunos/cadastrar" className="header-right__meta footnote-1 dark-secondary">
               Cadastrar aluno
               <span className="header-right__meta-icon">
                 <IconAluno fill="cyan-fill" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
