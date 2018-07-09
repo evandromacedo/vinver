@@ -8,28 +8,17 @@ import './SideNavItem.css';
 
 class SideNavItem extends Component {
   render() {
-    const {
-      className: classes,
-      title,
-      icon,
-      info,
-      exact,
-      to
-    } = this.props;
+    const { className: classes, title, icon, info, exact, to, toggleNav } = this.props;
 
     let className = 'side-nav-item';
     className += classes ? ` ${classes}` : '';
 
     return (
-      <NavLink exact={exact} to={to} className={className} activeClassName="side-nav-item--active">
-        <span className="side-nav-item__icon">{ icon }</span>
+      <NavLink onClick={toggleNav} exact={exact} to={to} className={className} activeClassName="side-nav-item--active">
+        <span className="side-nav-item__icon">{icon}</span>
         <span className="side-nav-item__title footnote-1 dark-secondary">
-          { title }
-          {info &&
-            <span className="side-nav-item__title__info footnote-2 dark-disabled">
-              { info }
-            </span>
-          }
+          {title}
+          {info && <span className="side-nav-item__title__info footnote-2 dark-disabled">{info}</span>}
         </span>
       </NavLink>
     );
@@ -42,7 +31,7 @@ SideNavItem.propTypes = {
   icon: PropTypes.element.isRequired,
   info: PropTypes.string,
   active: PropTypes.bool,
-  exact: PropTypes.bool,
+  exact: PropTypes.bool
 };
 
 SideNavItem.defaultProps = {
@@ -50,7 +39,7 @@ SideNavItem.defaultProps = {
   title: '',
   info: '',
   active: false,
-  exact: false,
+  exact: false
 };
 
 export default SideNavItem;

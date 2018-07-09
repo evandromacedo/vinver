@@ -18,16 +18,24 @@ import Exit from 'common/Icon/Exit';
 class SideNav extends Component {
   render() {
     const { url } = this.props.match;
+    const { toggleNav } = this.props;
 
     return (
       <aside className="side-nav">
         <ul className="side-nav__nav-list">
           <li>
-            <SideNavItem title="Home" exact to="/" icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />} />
+            <SideNavItem
+              title="Home"
+              toggleNav={toggleNav}
+              exact
+              to="/"
+              icon={<Home fill={url === '/' ? 'blue-fill' : 'grey-7'} />}
+            />
           </li>
           <li>
             <SideNavItem
               title="Perfil"
+              toggleNav={toggleNav}
               to="/perfil"
               icon={<Person fill={url === '/perfil' ? 'blue-fill' : 'grey-7'} />}
             />
@@ -39,7 +47,12 @@ class SideNav extends Component {
             <SideNavItem title="Mensagens" icon={<Chat fill="grey-7" />} info="4" />
           </li>
           <li>
-            <SideNavItem title="Metas" to="/metas" icon={<Book fill={url === '/metas' ? 'blue-fill' : 'grey-7'} />} />
+            <SideNavItem
+              title="Metas"
+              toggleNav={toggleNav}
+              to="/metas"
+              icon={<Book fill={url === '/metas' ? 'blue-fill' : 'grey-7'} />}
+            />
           </li>
           <li>
             <SideNavItem title="Plataforma Vinver" icon={<Dashboard fill="grey-7" />} />

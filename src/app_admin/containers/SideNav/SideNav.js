@@ -11,9 +11,9 @@ import Home from 'common/Icon/Home';
 import People from 'common/Icon/People';
 import Person from 'common/Icon/Person';
 import School from 'common/Icon/School';
-import Book from 'common/Icon/Book';
 import Dashboard from 'common/Icon/Dashboard';
 import Exit from 'common/Icon/Exit';
+import FolderShared from 'common/Icon/FolderShared';
 
 class SideNav extends Component {
   render() {
@@ -44,7 +44,7 @@ class SideNav extends Component {
             <SideNavItem title="Professores" icon={<Person fill="grey-7" />} />
           </li>
           <li>
-            <SideNavItem title="Turmas" icon={<Book fill="grey-7" />} />
+            <SideNavItem title="Turmas" icon={<FolderShared fill="grey-7" />} />
           </li>
           <li>
             <SideNavItem title="Classes" icon={<School fill="grey-7" />} />
