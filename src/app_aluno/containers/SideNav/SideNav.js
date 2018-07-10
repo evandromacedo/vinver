@@ -18,6 +18,7 @@ import Flag from 'common/Icon/Flag';
 class SideNav extends Component {
   render() {
     const { url } = this.props.match;
+    const { toggleNav } = this.props;
 
     return (
       <aside className="side-nav">
@@ -26,6 +27,7 @@ class SideNav extends Component {
             <SideNavItem
               className="side-nav-item__aluno"
               title="Home"
+              toggleNav={toggleNav}
               exact
               to="/"
               icon={<Home fill={url === '/' ? 'orange-fill' : 'grey-8'} />}
@@ -35,6 +37,7 @@ class SideNav extends Component {
             <SideNavItem
               className="side-nav-item__aluno"
               title="Perfil"
+              toggleNav={toggleNav}
               to="/perfil"
               icon={<Person fill={url === '/perfil' ? 'orange-fill' : 'grey-8'} />}
             />
@@ -51,34 +54,23 @@ class SideNav extends Component {
             <SideNavItem
               className="side-nav-item__aluno"
               title="Mensagens"
+              toggleNav={toggleNav}
               to="/mensagens"
               icon={<Chat fill={url === '/mensagens' ? 'orange-fill' : 'grey-8'} />}
               info="4"
             />
           </li>
           <li>
-            <SideNavItem
-              className="side-nav-item__aluno"
-              title="Metas"
-              icon={<Book fill="grey-8" />}
-            />
+            <SideNavItem className="side-nav-item__aluno" title="Metas" icon={<Book fill="grey-8" />} />
           </li>
           <li>
-            <SideNavItem
-              className="side-nav-item__aluno"
-              title="Ranking"
-              icon={<Flag fill="grey-8" />}
-            />
+            <SideNavItem className="side-nav-item__aluno" title="Ranking" icon={<Flag fill="grey-8" />} />
           </li>
         </ul>
 
         <ul>
           <li>
-            <SideNavItem
-              className="side-nav-item__aluno"
-              title="Sair"
-              icon={<Exit fill="grey-8" />}
-            />
+            <SideNavItem className="side-nav-item__aluno" title="Sair" icon={<Exit fill="grey-8" />} />
           </li>
           <li>
             <Link to="#" className="side-nav__footer-link caption-2 light-secondary">
