@@ -18,6 +18,7 @@ import FolderShared from 'common/Icon/FolderShared';
 class SideNav extends Component {
   render() {
     const { url } = this.props.match;
+    const { toggleNav } = this.props;
 
     return (
       <aside className="side-nav">
@@ -31,6 +32,7 @@ class SideNav extends Component {
             <SideNavItem
               title="Alunos"
               to="/alunos"
+              toggleNav={toggleNav}
               icon={<People fill={url === '/alunos' ? 'cyan-fill' : 'grey-7'} />}
             />
           </li>

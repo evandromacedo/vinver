@@ -31,33 +31,56 @@
   justify-self: end;
 }
 
-@media (max-width: 768px) {
-  .header-wrapper {
-    grid-template-areas: 'left center center center';
-  }
-
-  .header-center {
-    margin-right: 1.6rem;
-  }
-
-  .header-right {
-    display: none;
-  }
-}
-
 .header-left__logo {
   margin-left: 1.2rem;
   display: inline-block;
 }
 
-.header-right__meta-icon {
+.header-right__aluno-icon {
   display: grid;
   margin-right: 1.6rem;
 }
 
-.header-right__meta {
+.header-right__aluno {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 2rem;
   align-items: center;
+}
+
+/* Header Mobile */
+.header-mobile-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.6rem;
+  display: none;
+  grid-gap: 1.6rem;
+  grid-template-columns: 2.4rem auto 1fr 2.4rem 2.4rem 2.4rem;
+  align-items: center;
+}
+
+.header-mobile-nav {
+  display: none;
+  position: fixed;
+  height: calc(100% - 8rem);
+  width: 100%;
+  background-color: var(--grey-2);
+  top: 8rem;
+  bottom: 0;
+  z-index: 10;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    display: none;
+  }
+
+  .header-mobile-wrapper {
+    display: grid;
+  }
+
+  .header-mobile-nav {
+    display: block;
+  }
 }
