@@ -4,9 +4,8 @@ html {
 }
 
 .app-container {
-  margin: 0 auto;
+  margin: 0 auto 1.6rem auto;
   max-width: var(--container-width);
-  padding-bottom: 1.6rem;
   display: grid;
   grid-gap: 1.6rem;
   grid-template-columns: repeat(4, 1fr);
@@ -24,11 +23,16 @@ html {
 @media (max-width: 768px) {
   .app-container {
     grid-template-areas: 'main main main main';
-    padding: 0 1.6rem 1.6rem 1.6rem;
   }
 
   .side-nav-area {
     display: none;
+  }
+}
+
+@media (max-width: 1168px) {
+  .app-container {
+    margin: 0 1.6rem 1.6rem 1.6rem;
   }
 }
 

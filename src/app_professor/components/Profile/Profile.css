@@ -67,7 +67,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 975px) {
   .profile {
     grid-template-rows: 280px auto;
   }
